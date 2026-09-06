@@ -1,0 +1,16 @@
+$ lake build Research
+ℹ [8248/8250] Built Research.P4EnergyCounterexample (6.2s)
+info: Research/P4EnergyCounterexample.lean:132:0: 'P4EnergyCounterexample.graph_remark_one_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/P4EnergyCounterexample.lean:133:0: 'P4EnergyCounterexample.extreme_roots' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/P4EnergyCounterexample.lean:134:0: 'P4EnergyCounterexample.connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/P4EnergyCounterexample.lean:135:0: 'P4EnergyCounterexample.determinant_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8249/8250] Built Research (2.4s)
+Build completed successfully (8250 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+P4EnergyCounterexample.graph_remark_one_is_false :
+  ¬P4EnergyCounterexample.graphEnergy P4EnergyCounterexample.G ≥
+      √(2 * ↑P4EnergyCounterexample.G.edgeFinset.card * ↑(Fintype.card (Fin 4)) -
+          ↑(Fintype.card (Fin 4)) ^ 2 / 4 * (P4EnergyCounterexample.a - |(-P4EnergyCounterexample.a)|) ^ 2)
+'P4EnergyCounterexample.graph_remark_one_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code: 0

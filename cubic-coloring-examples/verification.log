@@ -1,0 +1,36 @@
+$ lake build Research
+ℹ [3292/3296] Built Research.CubicHomogeneous (3.0s)
+info: Research/CubicHomogeneous.lean:39:0: 'Research.CubicHomogeneous.K33_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/CubicHomogeneous.lean:40:0: 'Research.CubicHomogeneous.K33_four_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/CubicHomogeneous.lean:41:0: 'Research.CubicHomogeneous.K33_no_three_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3293/3296] Built Research.TriangleHomogeneous (1.8s)
+info: Research/TriangleHomogeneous.lean:44:0: 'Research.TriangleHomogeneous.twoHomogeneous_of_adjacent_neighbors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3294/3296] Built Research.HeawoodHomogeneous (2.6s)
+info: Research/HeawoodHomogeneous.lean:41:0: 'Research.HeawoodHomogeneous.Fano_not_propertyB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/HeawoodHomogeneous.lean:42:0: 'Research.HeawoodHomogeneous.Heawood_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/HeawoodHomogeneous.lean:43:0: 'Research.HeawoodHomogeneous.Heawood_three_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3295/3296] Built Research (1.4s)
+Build completed successfully (3296 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+Research.CubicHomogeneous.K33_four_colors :
+  Research.CubicHomogeneous.TwoHomogeneous Research.CubicHomogeneous.K33 Research.CubicHomogeneous.fourColoring
+'Research.CubicHomogeneous.K33_four_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.CubicHomogeneous.K33_no_three_colors :
+  ¬∃ c, Research.CubicHomogeneous.TwoHomogeneous Research.CubicHomogeneous.K33 c
+'Research.CubicHomogeneous.K33_no_three_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.HeawoodHomogeneous.Heawood_three_colors :
+  Research.CubicHomogeneous.TwoHomogeneous Research.HeawoodHomogeneous.Heawood Research.HeawoodHomogeneous.threeColoring
+'Research.HeawoodHomogeneous.Heawood_three_colors' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.HeawoodHomogeneous.Fano_not_propertyB :
+  ¬∃ c, ∀ (e : Fin 7), (Finset.image c (Research.HeawoodHomogeneous.fanoLines e)).card = 2
+'Research.HeawoodHomogeneous.Fano_not_propertyB' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.TriangleHomogeneous.twoHomogeneous_of_adjacent_neighbors.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (c : V → Fin 3) (hproper : ∀ (u v : V), G.Adj u v → c u ≠ c v)
+  (htri : ∀ (v : V), ∃ x y, G.Adj v x ∧ G.Adj v y ∧ G.Adj x y) : Research.CubicHomogeneous.TwoHomogeneous G c
+'Research.TriangleHomogeneous.twoHomogeneous_of_adjacent_neighbors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit code: 0

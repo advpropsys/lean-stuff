@@ -1,0 +1,6 @@
+# Matplotlib emits whitespace inside SVG path data.
+*.svg linguist-generated=true -whitespace
+*.png binary
+*.csv text eol=lf
+# Preserve the audited proof-source bytes, including final blank lines.
+*.lean whitespace=blank-at-eol,space-before-tab,-blank-at-eof

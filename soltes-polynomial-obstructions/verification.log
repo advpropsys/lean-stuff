@@ -1,0 +1,13 @@
+$ lake build Research
+✔ [8248/8250] Built Research.SoltesFamilyObstruction (2.9s)
+✔ [8249/8250] Built Research (2.4s)
+Build completed successfully (8250 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+SoltesFamilyObstruction.quadrangle_no_positive_integer_root (q : ℤ) (hq : 0 < q) :
+  SoltesFamilyObstruction.quadrangleDeficit q ≠ 0
+'SoltesFamilyObstruction.quadrangle_no_positive_integer_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+SoltesFamilyObstruction.hexagon_no_positive_integer_root (q : ℤ) (hq : 0 < q) :
+  SoltesFamilyObstruction.hexagonDeficit q ≠ 0
+'SoltesFamilyObstruction.hexagon_no_positive_integer_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code: 0

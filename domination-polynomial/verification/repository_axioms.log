@@ -1,0 +1,15 @@
+Research.DominationCounterexample.canonical_not_unimodal :
+  ¬Research.DominationValley.Unimodal Research.DominationCanonicalPartition.coefficient
+Research.DominationCounterexample.canonical_connected_counterexample :
+  Research.DominationGadgetGraph.finalGraph.Connected ∧
+    Fintype.card Research.DominationGadgetGraph.Vertex = 15211807199220036387538871517957 ∧
+      ¬Research.DominationValley.Unimodal Research.DominationCanonicalPartition.coefficient
+'Research.DominationCounterexample.canonical_not_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Research.DominationCounterexample.canonical_connected_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Research.DominationIndependenceCorollary.control_independence_not_unimodal :
+  ¬Research.DominationValley.Unimodal Research.DominationIndependenceCorollary.coefficient
+'Research.DominationIndependenceCorollary.control_independence_not_unimodal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

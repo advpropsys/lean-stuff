@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-06",
+  "lean": "4.29.0",
+  "mathlib_revision": "8a178386ffc0f5fef0b77738bb5449d50efeea95",
+  "fresh_local_source_build_exit_code": 0,
+  "final_package_build_exit_code": 0,
+  "axiom_audit_exit_code": 0,
+  "source_hashes_checked": 29,
+  "canonical_theorem": "Research.DominationCounterexample.canonical_connected_counterexample",
+  "canonical_theorem_research_hypotheses": 0,
+  "canonical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "reused_external_dependency_caches": true,
+  "copied_existing_local_proof_build_artifacts": false,
+  "smaller_projective_scalar_checks": 33,
+  "permutation_existence_scalar_checks": 36,
+  "smaller_graph_theorems_fully_formalized": false,
+  "publication_priority_certified": false
+}

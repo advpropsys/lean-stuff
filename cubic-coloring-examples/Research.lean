@@ -1,0 +1,3 @@
+import Research.CubicHomogeneous
+import Research.HeawoodHomogeneous
+import Research.TriangleHomogeneous

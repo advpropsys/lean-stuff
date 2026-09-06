@@ -1,0 +1,6 @@
+import Research
+
+#check SoltesFamilyObstruction.quadrangle_no_positive_integer_root
+#print axioms SoltesFamilyObstruction.quadrangle_no_positive_integer_root
+#check SoltesFamilyObstruction.hexagon_no_positive_integer_root
+#print axioms SoltesFamilyObstruction.hexagon_no_positive_integer_root

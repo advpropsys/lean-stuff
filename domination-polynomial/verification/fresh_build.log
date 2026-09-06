@@ -1,0 +1,166 @@
+ℹ [8248/8275] Built Research.DominationIncidenceGraph (2.7s)
+info: Research/DominationIncidenceGraph.lean:149:0: 'Research.DominationIncidenceGraph.dominates_iff_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIncidenceGraph.lean:150:0: 'Research.DominationIncidenceGraph.all_controls_omitted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIncidenceGraph.lean:151:0: 'Research.DominationIncidenceGraph.dominates_iff_endpoints_or_clone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationIncidenceGraph.lean:152:0: 'Research.DominationIncidenceGraph.vertex_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIncidenceGraph.lean:237:0: 'Research.DominationIncidenceGraph.dominating_fiber_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8249/8275] Built Research.DominationPhaseBalance (3.4s)
+warning: Research/DominationPhaseBalance.lean:8:5: unused variable `hGA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Research/DominationPhaseBalance.lean:63:0: 'Research.DominationPhaseBalance.good_fraction_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8250/8275] Built Research.DominationSoftComparison (3.6s)
+info: Research/DominationSoftComparison.lean:131:0: 'Research.DominationSoftComparison.exists_edge_free_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationSoftComparison.lean:132:0: 'Research.DominationSoftComparison.weighted_injection_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSoftComparison.lean:133:0: 'Research.DominationSoftComparison.finite_edge_soft_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8251/8275] Built Research.DominationValley (3.7s)
+info: Research/DominationValley.lean:148:0: 'Research.DominationValley.not_unimodal_of_interval_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationValley.lean:149:0: 'Research.DominationValley.not_unimodal_of_real_interval_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationValley.lean:150:0: 'Research.DominationValley.not_unimodal_of_interval_mass_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8252/8275] Built Research.DominationExpansion (4.5s)
+info: Research/DominationExpansion.lean:140:0: 'Research.DominationExpansion.empty_rectangle_of_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationExpansion.lean:141:0: 'Research.DominationExpansion.empty_rectangle_of_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationExpansion.lean:142:0: 'Research.DominationExpansion.exists_incidence_of_large_sets' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8253/8275] Built Research.DominationParameters (5.6s)
+info: Research/DominationParameters.lean:128:0: 'Research.DominationParameters.q_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationParameters.lean:129:0: 'Research.DominationParameters.valley_before_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationParameters.lean:130:0: 'Research.DominationParameters.soft_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationParameters.lean:131:0: 'Research.DominationParameters.hard_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationParameters.lean:132:0: 'Research.DominationParameters.noise_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationParameters.lean:133:0: 'Research.DominationParameters.good_phase_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8254/8275] Built Research.DominationConcentration (5.7s)
+info: Research/DominationConcentration.lean:148:0: 'Research.DominationConcentration.bounded_sum_abs_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationConcentration.lean:149:0: 'Research.DominationConcentration.weighted_binomial_lower_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationConcentration.lean:150:0: 'Research.DominationConcentration.minority_states_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8255/8275] Built Research.DominationCoefficientCounts (3.5s)
+info: Research/DominationCoefficientCounts.lean:59:0: 'Research.DominationCoefficientCounts.sum_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCoefficientCounts.lean:60:0: 'Research.DominationCoefficientCounts.not_unimodal_of_event_counts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8256/8275] Built Research.DominationPartition (4.6s)
+info: Research/DominationPartition.lean:231:0: 'Research.DominationPartition.dominating_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationPartition.lean:232:0: 'Research.DominationPartition.hard_dominating_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationPartition.lean:233:0: 'Research.DominationPartition.labeled_soft_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationPartition.lean:234:0: 'Research.DominationPartition.dominating_count_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationPartition.lean:235:0: 'Research.DominationPartition.nonhard_fraction_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8257/8275] Built Research.DominationSmallParameters (5.2s)
+info: Research/DominationSmallParameters.lean:173:0: 'Research.DominationSmallParameters.q_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSmallParameters.lean:174:0: 'Research.DominationSmallParameters.entropy_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSmallParameters.lean:175:0: 'Research.DominationSmallParameters.optimized_entropy_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSmallParameters.lean:176:0: 'Research.DominationSmallParameters.noise_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSmallParameters.lean:177:0: 'Research.DominationSmallParameters.good_phase_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSmallParameters.lean:178:0: 'Research.DominationSmallParameters.real_intervals_and_center' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [8258/8275] Built Research.DominationProjectiveGeometry (7.6s)
+info: Research/DominationProjectiveGeometry.lean:64:0: 'Research.DominationProjectiveGeometry.normalized_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationProjectiveGeometry.lean:65:0: 'Research.DominationProjectiveGeometry.normalized_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Research/DominationProjectiveGeometry.lean:131:15: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [o̵n̵e̵_̵mul,̵ ̵m̵u̵l̵_zero, mul_one, zero_add, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Research/DominationProjectiveGeometry.lean:154:15: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [zero_m̵u̵l̵,̵ ̵z̵e̵r̵o̵_̵add, one_mul, mul_one, mul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Research/DominationProjectiveGeometry.lean:302:0: 'Research.DominationProjectiveGeometry.incidence_between_large_sets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationProjectiveGeometry.lean:303:0: 'Research.DominationProjectiveGeometry.incidence_gram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationProjectiveGeometry.lean:304:0: 'Research.DominationProjectiveGeometry.common_neighbor_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/DominationProjectiveGeometry.lean:306:0: 'Research.DominationProjectiveGeometry.incidence_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8259/8275] Built Research.DominationFiniteTails (8.3s)
+info: Research/DominationFiniteTails.lean:119:0: 'Research.DominationFiniteTails.alphabet_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationFiniteTails.lean:120:0: 'Research.DominationFiniteTails.subset_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationFiniteTails.lean:121:0: 'Research.DominationFiniteTails.four_state_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8260/8275] Built Research.DominationProjectiveInstance (4.3s)
+info: Research/DominationProjectiveInstance.lean:50:0: 'Research.DominationProjectiveInstance.canonical_disperser' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationProjectiveInstance.lean:51:0: 'Research.DominationProjectiveInstance.canonical_disperser_integer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8261/8275] Built Research.DominationHardPhases (4.4s)
+info: Research/DominationHardPhases.lean:226:0: 'Research.DominationHardPhases.phase_card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhases.lean:227:0: 'Research.DominationHardPhases.left_bad_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhases.lean:228:0: 'Research.DominationHardPhases.hard_card_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhases.lean:229:0: 'Research.DominationHardPhases.small_words_entropy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8262/8275] Built Research.DominationGadgetGraph (4.6s)
+warning: Research/DominationGadgetGraph.lean:22:15: unused variable `j`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Research/DominationGadgetGraph.lean:26:13: unused variable `i`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Research/DominationGadgetGraph.lean:119:0: 'Research.DominationGadgetGraph.edge_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetGraph.lean:120:0: 'Research.DominationGadgetGraph.final_vertex_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetGraph.lean:121:0: 'Research.DominationGadgetGraph.final_dominates_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8263/8275] Built Research.DominationBitEncoding (5.4s)
+info: Research/DominationBitEncoding.lean:61:0: 'Research.DominationBitEncoding.left_word_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8264/8275] Built Research.DominationGadgetProperties (3.4s)
+info: Research/DominationGadgetProperties.lean:64:0: 'Research.DominationGadgetGraph.final_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetProperties.lean:65:0: 'Research.DominationGadgetGraph.endpoint_pair_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8265/8275] Built Research.DominationCanonicalPartition (4.2s)
+info: Research/DominationCanonicalPartition.lean:106:0: 'Research.DominationCanonicalPartition.D_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCanonicalPartition.lean:107:0: 'Research.DominationCanonicalPartition.hard_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCanonicalPartition.lean:108:0: 'Research.DominationCanonicalPartition.nonhard_fraction_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8266/8275] Built Research.DominationCloneSizes (5.0s)
+info: Research/DominationCloneSizes.lean:118:0: 'Research.DominationCloneSizes.selected_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCloneSizes.lean:119:0: 'Research.DominationCloneSizes.hard_event_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCloneSizes.lean:120:0: 'Research.DominationCloneSizes.canonical_clone_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8267/8275] Built Research.DominationGadgetStates (4.0s)
+info: Research/DominationGadgetStates.lean:176:0: 'Research.DominationGadgetStates.hard_card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetStates.lean:177:0: 'Research.DominationGadgetStates.encoded_free_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetStates.lean:178:0: 'Research.DominationGadgetStates.encoded_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationGadgetStates.lean:179:0: 'Research.DominationGadgetStates.hard_size_event_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8268/8275] Built Research.DominationSizeIntervals (4.3s)
+info: Research/DominationSizeIntervals.lean:91:0: 'Research.DominationSizeIntervals.selected_in_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSizeIntervals.lean:92:0: 'Research.DominationSizeIntervals.selected_in_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSizeIntervals.lean:93:0: 'Research.DominationSizeIntervals.leftIndex_before_valley' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationSizeIntervals.lean:94:0: 'Research.DominationSizeIntervals.rightIndex_after_valley' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8269/8275] Built Research.DominationCoefficientBridge (4.1s)
+info: Research/DominationCoefficientBridge.lean:118:0: 'Research.DominationCoefficientBridge.coefficient_eq_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCoefficientBridge.lean:119:0: 'Research.DominationCoefficientBridge.not_unimodal_of_outside_fraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8270/8275] Built Research.DominationHardPhaseBounds (10s)
+info: Research/DominationHardPhaseBounds.lean:443:0: 'Research.DominationHardPhaseBounds.bad_fraction_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhaseBounds.lean:444:0: 'Research.DominationHardPhaseBounds.goodA_omitted_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhaseBounds.lean:445:0: 'Research.DominationHardPhaseBounds.goodC_omitted_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhaseBounds.lean:446:0: 'Research.DominationHardPhaseBounds.goodA_fraction_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardPhaseBounds.lean:447:0: 'Research.DominationHardPhaseBounds.goodC_fraction_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8271/8275] Built Research.DominationIntervalMass (11s)
+info: Research/DominationIntervalMass.lean:244:0: 'Research.DominationIntervalMass.left_interval_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIntervalMass.lean:245:0: 'Research.DominationIntervalMass.right_interval_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIntervalMass.lean:246:0: 'Research.DominationIntervalMass.outside_intervals_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIntervalMass.lean:247:0: 'Research.DominationIntervalMass.joint_prob' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationIntervalMass.lean:248:0: 'Research.DominationIntervalMass.clone_good_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8272/8275] Built Research.DominationHardBandTransfer (8.1s)
+info: Research/DominationHardBandTransfer.lean:105:0: 'Research.DominationHardBandTransfer.left_band_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardBandTransfer.lean:106:0: 'Research.DominationHardBandTransfer.right_band_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationHardBandTransfer.lean:107:0: 'Research.DominationHardBandTransfer.bad_band_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8273/8275] Built Research.DominationCounterexample (6.2s)
+info: Research/DominationCounterexample.lean:32:0: 'Research.DominationCounterexample.canonical_not_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/DominationCounterexample.lean:33:0: 'Research.DominationCounterexample.canonical_connected_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8274/8275] Built Research (2.4s)
+Build completed successfully (8275 jobs).

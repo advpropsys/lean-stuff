@@ -1,0 +1,12 @@
+$ lake build Research
+ℹ [3285/3287] Built Research.OddPositions (2.4s)
+info: Research/OddPositions.lean:460:0: 'Kimberling.oddPosition_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/OddPositions.lean:461:0: 'Kimberling.oddPosition_stable' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3286/3287] Built Research (1.4s)
+Build completed successfully (3287 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+Kimberling.oddPosition_stable (n N : ℕ) (hn : 1 ≤ n) (hN : n - 1 ≤ N) :
+  List.idxOf (2 * n - 1) (Kimberling.sequencePrefix N) + 1 = n - 1 + Nat.fib (n + 1)
+'Kimberling.oddPosition_stable' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code: 0

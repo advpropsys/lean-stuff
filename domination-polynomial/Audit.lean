@@ -1,0 +1,8 @@
+import Research
+
+#check Research.DominationCounterexample.canonical_not_unimodal
+#check Research.DominationCounterexample.canonical_connected_counterexample
+#print axioms Research.DominationCounterexample.canonical_not_unimodal
+#print axioms Research.DominationCounterexample.canonical_connected_counterexample
+#check Research.DominationIndependenceCorollary.control_independence_not_unimodal
+#print axioms Research.DominationIndependenceCorollary.control_independence_not_unimodal

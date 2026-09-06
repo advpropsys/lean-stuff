@@ -1,0 +1,24 @@
+{
+  "verification_date": "2026-09-06",
+  "lean": "4.29.0",
+  "mathlib_revision": "8a178386ffc0f5fef0b77738bb5449d50efeea95",
+  "projects": [
+    "cubic-coloring-examples",
+    "domination-polynomial",
+    "fair-representation-p7",
+    "graph-energy-p4",
+    "motzkin-root-log-concavity",
+    "nested-floor-bound",
+    "odd-position-formula",
+    "soltes-polynomial-obstructions"
+  ],
+  "all_project_builds_passed": true,
+  "all_project_axiom_audits_passed": true,
+  "external_dependency_cache_reused": true,
+  "local_lean_sources_checked": 55,
+  "example_and_certificate_scripts_passed": 11,
+  "plot_scripts_passed": 2,
+  "local_markdown_links_passed": true,
+  "external_peer_review": false,
+  "historical_priority_certified": false
+}

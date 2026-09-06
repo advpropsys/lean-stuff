@@ -1,0 +1,26 @@
+$ lake build Research
+ℹ [3286/3291] Built Research.MotzkinFinite (1.0s)
+info: Research/MotzkinFinite.lean:29:0: 'Research.MotzkinFinite.center6' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinFinite.lean:30:0: 'Research.MotzkinFinite.center7' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinFinite.lean:31:0: 'Research.MotzkinFinite.center8' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinFinite.lean:32:0: 'Research.MotzkinFinite.center9' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinFinite.lean:33:0: 'Research.MotzkinFinite.center5_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3287/3291] Built Research.MotzkinAnalysis (2.6s)
+✔ [3288/3291] Built Research.Motzkin (2.8s)
+ℹ [3289/3291] Built Research.MotzkinTheorem (3.7s)
+info: Research/MotzkinTheorem.lean:107:0: 'Research.Motzkin.zhao_conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinTheorem.lean:108:0: 'Research.Motzkin.root_strict_log_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Research/MotzkinTheorem.lean:109:0: 'Research.Motzkin.root_center5_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3290/3291] Built Research (1.5s)
+Build completed successfully (3291 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+Research.Motzkin.root_strict_log_concave (n : ℕ) (hn : 6 ≤ n) :
+  Research.Motzkin.root (n - 1) * Research.Motzkin.root (n + 1) < Research.Motzkin.root n ^ 2
+'Research.Motzkin.root_strict_log_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.Motzkin.root_center5_reverse : Research.Motzkin.root 5 ^ 2 < Research.Motzkin.root 4 * Research.Motzkin.root 6
+'Research.Motzkin.root_center5_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+Research.Motzkin.zhao_conjecture (n : ℕ) (hn : 10 ≤ n) :
+  Research.Motzkin.root (n - 1) * Research.Motzkin.root (n + 1) ≤ Research.Motzkin.root n ^ 2
+'Research.Motzkin.zhao_conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code: 0

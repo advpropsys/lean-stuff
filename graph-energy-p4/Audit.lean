@@ -1,0 +1,4 @@
+import Research
+
+#check P4EnergyCounterexample.graph_remark_one_is_false
+#print axioms P4EnergyCounterexample.graph_remark_one_is_false

@@ -1,0 +1,28 @@
+{
+  "q": 2147483647,
+  "w": 256,
+  "b": 4611686016279904257,
+  "controls": 23058430081399521285,
+  "auxiliary_edges": 59421121871863195146318249987,
+  "clones": 15211807199196977957457471996672,
+  "vertices": 15211807199220036387538871517957,
+  "K": 7605903599621547408810135519621,
+  "middle_index": 7605903599617581358836134801960,
+  "formal_theorem": "Research.DominationCounterexample.canonical_connected_counterexample",
+  "meaning": "Certified inequalities, not computed exact coefficients",
+  "normalized_size_coordinate": "(size-K)/b",
+  "bands": [
+    [
+      "-109/100",
+      "-91/100"
+    ],
+    [
+      "-81/100",
+      "-70/100"
+    ]
+  ],
+  "each_band_mass_strict_lower_bound": "1/3",
+  "outside_mass_strict_upper_bound": "2^-189",
+  "middle_coefficient_probability_strict_upper_bound": "2^-189",
+  "existential_coefficient_probability_in_each_band_strict_lower_bound": "2^-106"
+}

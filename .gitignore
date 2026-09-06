@@ -1,0 +1,6 @@
+**/.lake/
+**/.elan/
+**/.venv/
+**/__pycache__/
+*.pyc
+.DS_Store

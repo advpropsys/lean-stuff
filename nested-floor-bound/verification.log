@@ -1,0 +1,11 @@
+$ lake build Research
+ℹ [3285/3287] Built Research.BeattySqrtTwo (4.1s)
+info: Research/BeattySqrtTwo.lean:57:0: 'Research.BeattySqrtTwo.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3286/3287] Built Research (1.5s)
+Build completed successfully (3287 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+Research.BeattySqrtTwo.conjecture (n : ℕ) (hn : 1 ≤ n) :
+  1 < (1 + √2) * √2 * ↑n - ↑(Research.BeattySqrtTwo.seq n) ∧ (1 + √2) * √2 * ↑n - ↑(Research.BeattySqrtTwo.seq n) < 3
+'Research.BeattySqrtTwo.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code: 0

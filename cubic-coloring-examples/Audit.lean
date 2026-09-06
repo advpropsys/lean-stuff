@@ -1,0 +1,12 @@
+import Research
+
+#check Research.CubicHomogeneous.K33_four_colors
+#print axioms Research.CubicHomogeneous.K33_four_colors
+#check Research.CubicHomogeneous.K33_no_three_colors
+#print axioms Research.CubicHomogeneous.K33_no_three_colors
+#check Research.HeawoodHomogeneous.Heawood_three_colors
+#print axioms Research.HeawoodHomogeneous.Heawood_three_colors
+#check Research.HeawoodHomogeneous.Fano_not_propertyB
+#print axioms Research.HeawoodHomogeneous.Fano_not_propertyB
+#check Research.TriangleHomogeneous.twoHomogeneous_of_adjacent_neighbors
+#print axioms Research.TriangleHomogeneous.twoHomogeneous_of_adjacent_neighbors

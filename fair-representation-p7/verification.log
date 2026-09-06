@@ -1,0 +1,23 @@
+$ lake build Research
+ℹ [8248/8250] Built Research.FairRepresentationCounterexample (4.8s)
+info: Research/FairRepresentationCounterexample.lean:107:0: 'FairRepresentationCounterexample.integer_budget_conjecture_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Research/FairRepresentationCounterexample.lean:108:0: 'FairRepresentationCounterexample.integer_budget_conjecture_false_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8249/8250] Built Research (2.4s)
+Build completed successfully (8250 jobs).
+exit code: 0
+$ lake env lean Audit.lean
+FairRepresentationCounterexample.integer_budget_conjecture_false_real :
+  ¬∃ S b,
+      FairRepresentationCounterexample.Independent S ∧
+        (∀ (i : Fin 3),
+            ↑(S ∩ FairRepresentationCounterexample.parts i).card ≥
+              ↑(FairRepresentationCounterexample.parts i).card / 2 - ↑(b i)) ∧
+          ∑ i, ↑(b i) ≤ 3 / 2 ∧ ∀ (i : Fin 3), b i ≤ 1
+'FairRepresentationCounterexample.integer_budget_conjecture_false_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit code: 0
