@@ -26,14 +26,14 @@ no system font installation is required.
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026motzkinrootlogconcavity,
   author = {Korolev, Konstantin},
   title = {Sharp log-concavity of alternating Motzkin roots},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/motzkin-root-log-concavity}
 }
 ```

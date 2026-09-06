@@ -19,14 +19,14 @@ The refuted statement is a printed bound, not a conjecture. The paper's separate
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026graphenergyp4,
   author = {Korolev, Konstantin},
   title = {P$_4$ refutes a printed spectral-energy bound},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/graph-energy-p4}
 }
 ```

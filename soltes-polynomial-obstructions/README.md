@@ -21,14 +21,14 @@ Stijn Cambie, [*Towards the essence of Šoltés' problem*](https://arxiv.org/htm
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026soltespolynomialobstructions,
   author = {Korolev, Konstantin},
   title = {Two polynomial nonvanishing theorems},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/soltes-polynomial-obstructions}
 }
 ```

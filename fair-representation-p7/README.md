@@ -23,14 +23,14 @@ Meysam Alishahi and Frédéric Meunier, [*Fair splitting of colored paths*](http
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026fairrepresentationp7,
   author = {Korolev, Konstantin},
   title = {A seven-vertex counterexample to literal integer-budget wording},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/fair-representation-p7}
 }
 ```

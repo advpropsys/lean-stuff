@@ -17,14 +17,14 @@ Borut Lužar and Roman Soták, “Homogeneous coloring of cubic graphs,” Secti
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026cubiccoloringexamples,
   author = {Korolev, Konstantin},
   title = {Supporting examples for homogeneous graph coloring},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/cubic-coloring-examples}
 }
 ```

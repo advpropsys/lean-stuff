@@ -17,14 +17,14 @@ The sources, exact data, interpretation, and reproduction commands are in
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026dominationpolynomial,
   author = {Korolev, Konstantin},
   title = {A Lean-verified domination-polynomial counterexample},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial}
 }
 ```

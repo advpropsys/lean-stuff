@@ -37,6 +37,10 @@ increase followed by weak decrease, matching the Alikhani–Peng conjecture.
 
 ![Small graphs from the construction](https://raw.githubusercontent.com/advpropsys/lean-stuff/main/domination-polynomial/figures/graph_example.svg)
 
+The 182-vertex graph illustrates the adjacency construction; its domination
+coefficients have not been computed, so it is not a verified counterexample.
+The 14-vertex graph is unimodal. No minimum counterexample order is established.
+
 The [examples](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/README.md) include the adjacency definition, a plot of
 the coefficient bounds, and exact counts for a 14-vertex graph.
 
@@ -94,14 +98,14 @@ No faster domination algorithm or engineering application has been established.
 
 ## Citation
 
-Konstantin Korolev (Whitecircle).
+Konstantin Korolev (whitecircle).
 
 ```bibtex
 @misc{korolev2026dominationpolynomial,
   author = {Korolev, Konstantin},
   title = {A Lean-verified domination-polynomial counterexample},
   year = {2026},
-  note = {Affiliation: Whitecircle},
+  note = {Affiliation: whitecircle},
   url = {https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial}
 }
 ```
