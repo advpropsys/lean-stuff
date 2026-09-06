@@ -16,3 +16,17 @@ Lean verifies the graph, adjacency matrix, characteristic polynomial, full root 
 **Printed spectral-energy lower bound, Remark 1.** Akbar Jahanbani and Ivan Gutman, [*Exact variance-energy relations and optimal spectral bounds for graphs*](https://pisrt.org/psr-press/journals/oms/01-vol-9-2025-issue-1/exact-variance-energy-relations-and-optimal-spectral-bounds-for-graphs/), Open Journal of Mathematical Sciences 9 (2025), 301–307, **Remark 1, page 302** ([PDF](https://pisrt.org/psrpress/j/oms/2025/exact-variance-energy-relations-and-optimal-spectral-bounds-for-graphs.pdf#page=2)); DOI [10.30538/oms2025.0261](https://doi.org/10.30538/oms2025.0261).
 
 The refuted statement is a printed bound, not a conjecture. The paper's separate conjecture on nonsingular graphs is outside this result's scope.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026graphenergyp4,
+  author = {Korolev, Konstantin},
+  title = {P$_4$ refutes a printed spectral-energy bound},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/graph-energy-p4}
+}
+```

@@ -91,3 +91,17 @@ uses the same counting lemmas for the auxiliary graph. Nonunimodal independence 
 [Bhattacharyya–Kahn's construction](https://arxiv.org/abs/1301.1752).
 
 No faster domination algorithm or engineering application has been established.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026dominationpolynomial,
+  author = {Korolev, Konstantin},
+  title = {A Lean-verified domination-polynomial counterexample},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial}
+}
+```

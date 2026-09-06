@@ -14,3 +14,17 @@ All three statements are proved in Lean. These are known examples and a conditio
 **Lužar–Soták four-color problem for 2-homogeneous cubic colorings.** If a cubic graph admits a proper 2-homogeneous coloring, must it admit one with at most four colors? These examples do not resolve that general question.
 
 Borut Lužar and Roman Soták, “Homogeneous coloring of cubic graphs,” Section 5, **Problem 5.1**, in [*Open problems of the 33rd Workshop on Cycles and Colourings*](https://arxiv.org/html/2511.02892v1#S5), arXiv:2511.02892v1 (2025). The paper attributes the bipartite special case to M. Janicová, T. Madaras, R. Soták and B. Lužar, *From NMNR-coloring of hypergraphs to homogenous coloring of graphs*, Ars Mathematica Contemporanea 12(2) (2017), 351–360.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026cubiccoloringexamples,
+  author = {Korolev, Konstantin},
+  title = {Supporting examples for homogeneous graph coloring},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/cubic-coloring-examples}
+}
+```

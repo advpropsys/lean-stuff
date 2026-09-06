@@ -23,3 +23,17 @@ no system font installation is required.
 ## Conjecture and source
 
 **Zhao's log-concavity conjecture for roots of alternating Motzkin sums.** Feng-Zhen Zhao, [*The log-balancedness of the sequence for the alternating sums of Motzkin numbers*](https://math.colgate.edu/~integers/aa55/aa55.pdf), Integers 26 (2026), A55, **Section 3, Conjecture 1, page 8**. The conjecture states that the sequence (Tₙ^(1/n))ₙ≥₉ is log-concave. The Lean theorem proves strict log-concavity with the sharp starting index 5.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026motzkinrootlogconcavity,
+  author = {Korolev, Konstantin},
+  title = {Sharp log-concavity of alternating Motzkin roots},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/motzkin-root-log-concavity}
+}
+```

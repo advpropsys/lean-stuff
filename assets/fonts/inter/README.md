@@ -10,3 +10,17 @@ The license is copied from the matching upstream release tag.
 The plotting scripts register these files directly. No system font installation
 is required. Text and mathematical labels use Inter; SVG exports outline the
 glyphs, and PDF exports embed the font to preserve its appearance on other systems.
+
+## Repository citation
+
+For the mathematical repository: Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026leanstuff,
+  author = {Korolev, Konstantin},
+  title = {Lean proofs and mathematical examples},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff}
+}
+```

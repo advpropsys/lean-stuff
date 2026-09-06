@@ -11,3 +11,17 @@ This is the inequality listed in [OEIS A341239](https://oeis.org/A341239). The c
 **Kimberling's nested-floor inequality, OEIS A341239.** Clark Kimberling, [*a(n) = floor(r*floor(s*n)), where r = 1 + sqrt(2) and s = sqrt(2)*](https://oeis.org/A341239), The On-Line Encyclopedia of Integer Sequences, entry authored February 7, 2021. The **Comments** section states the conjecture 1 < r·s·n − a(n) < 3 for n≥1.
 
 The cited source is an OEIS entry, with no numbered paper conjecture. The Lean theorem proves this exact inequality.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026nestedfloorbound,
+  author = {Korolev, Konstantin},
+  title = {Nested-floor error bound (A341239)},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/nested-floor-bound}
+}
+```

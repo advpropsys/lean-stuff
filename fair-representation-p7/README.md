@@ -20,3 +20,17 @@ The cited preprint and author manuscript define the scope of this correction. Th
 **Fair representation by independent sets in paths, integer-budget formulation.** Ron Aharoni, Noga Alon, Eli Berger, Maria Chudnovsky, Dani Kotlar, Martin Loebl and Ran Ziv, [*Fair representation by independent sets*](https://arxiv.org/abs/1611.03196v1), arXiv:1611.03196v1 (2016), Section 1.3, **Conjecture 1.6, page 3** ([PDF](https://arxiv.org/pdf/1611.03196v1#page=3)). The P₇ example above contradicts that version's simultaneous integer-budget conditions.
 
 Meysam Alishahi and Frédéric Meunier, [*Fair splitting of colored paths*](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v24i3p41/pdf/), The Electronic Journal of Combinatorics 24(3) (2017), P3.41 ([preprint](https://arxiv.org/abs/1704.02921)), prove a different formulation. Their theorem is not contradicted by this example.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026fairrepresentationp7,
+  author = {Korolev, Konstantin},
+  title = {A seven-vertex counterexample to literal integer-budget wording},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/fair-representation-p7}
+}
+```

@@ -127,3 +127,17 @@ and PDF embeds the font. Keep the full repository checkout when regenerating:
 the scripts use [the shared plot style](https://github.com/advpropsys/lean-stuff/blob/main/plot_style.py) and
 [bundled Inter files](https://github.com/advpropsys/lean-stuff/blob/main/assets/fonts/inter/README.md). No system font
 installation is needed.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026dominationpolynomial,
+  author = {Korolev, Konstantin},
+  title = {A Lean-verified domination-polynomial counterexample},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial}
+}
+```

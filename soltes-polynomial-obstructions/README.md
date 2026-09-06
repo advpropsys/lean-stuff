@@ -18,3 +18,17 @@ The graph-to-polynomial derivation, distances after vertex deletion and full gra
 Ľubomír Šoltés, [*Transmission in graphs: A bound and vertex removing*](https://dml.cz/handle/10338.dmlcz/132387), Mathematica Slovaca 41(1) (1991), 11–16, **unnumbered problem on page 16** ([PDF](https://dml.cz/bitstream/handle/10338.dmlcz/132387/MathSlov_41-1991-1_2.pdf#page=7)). The original problem asks for a classification; it does not state uniqueness as a theorem.
 
 Stijn Cambie, [*Towards the essence of Šoltés' problem*](https://arxiv.org/html/2406.03451v1), arXiv:2406.03451v1 (2024), **Definition 2 and Example 7**, supplies the arc-graph construction and a generalized-hexagon example relevant to these polynomial obstructions. The Lean results here are arithmetic lemmas; they neither prove nor disprove the general Šoltés problem.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026soltespolynomialobstructions,
+  author = {Korolev, Konstantin},
+  title = {Two polynomial nonvanishing theorems},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/soltes-polynomial-obstructions}
+}
+```

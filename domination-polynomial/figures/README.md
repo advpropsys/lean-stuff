@@ -14,3 +14,17 @@ SVG and PDF versions preserve vector detail.
 
 The sources, exact data, interpretation, and reproduction commands are in
 [the examples directory](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/README.md).
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026dominationpolynomial,
+  author = {Korolev, Konstantin},
+  title = {A Lean-verified domination-polynomial counterexample},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial}
+}
+```

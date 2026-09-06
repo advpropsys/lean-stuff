@@ -45,3 +45,17 @@ have not undergone external peer review. Each result includes source attribution
 and verification scope. A successful formal proof establishes its stated
 mathematics, not its novelty. None of these results settles an unresolved Erdős
 problem.
+
+## Citation
+
+Konstantin Korolev (Whitecircle).
+
+```bibtex
+@misc{korolev2026leanstuff,
+  author = {Korolev, Konstantin},
+  title = {Lean proofs and mathematical examples},
+  year = {2026},
+  note = {Affiliation: Whitecircle},
+  url = {https://github.com/advpropsys/lean-stuff}
+}
+```
