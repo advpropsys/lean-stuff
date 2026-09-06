@@ -17,8 +17,24 @@
   "external_dependency_cache_reused": true,
   "local_lean_sources_checked": 55,
   "example_and_certificate_scripts_passed": 11,
-  "plot_scripts_passed": 2,
+  "plot_scripts_passed": 3,
   "local_markdown_links_passed": true,
   "external_peer_review": false,
-  "historical_priority_certified": false
+  "historical_priority_certified": false,
+  "plot_png_dpi": 600,
+  "plot_font": "Inter 3.019 (bundled)",
+  "plot_formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "graph_illustration": {
+    "projective_vertices": 182,
+    "projective_edges": 889,
+    "toy_vertices": 14,
+    "toy_edges": 28,
+    "all_edges_drawn": true,
+    "toy_dominating_set_size": 3,
+    "is_certified_counterexample": false
+  }
 }

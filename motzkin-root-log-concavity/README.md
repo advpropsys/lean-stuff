@@ -10,6 +10,10 @@ A bounded primary-source review on September 5, 2026 found no earlier proof of t
 
 ![Root sequence and the sharp log-concavity threshold](example-plot.png)
 
-The plot is numerical; each of the 56 displayed margin signs is checked by exact integer powers before rendering. The universal conclusion comes from Lean. [Exact sequence values and plotted data](plot-data.csv) · [SVG](example-plot.svg).
+The plot is numerical; each of the 56 displayed margin signs is checked by exact integer powers before rendering. The universal conclusion comes from Lean. [Exact sequence values and plotted data](plot-data.csv) · [SVG](example-plot.svg) · [PDF](example-plot.pdf).
 
-To regenerate: install `requirements-plot.txt` and run `python3 plot.py`.
+The figure uses Inter throughout and is available as a 600-dpi PNG and vector
+SVG/PDF. To regenerate: keep the full repository checkout, install
+`requirements-plot.txt`, and run `python3 plot.py`. The script uses
+[the shared style](../plot_style.py) and [bundled fonts](../assets/fonts/inter/README.md);
+no system font installation is required.

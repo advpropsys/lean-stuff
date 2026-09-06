@@ -32,7 +32,9 @@ reuse pinned external dependency caches; local proof modules are compiled in
 their individual projects. The caches are not committed.
 
 Each folder explains how to run its examples. Plot scripts include dependency
-requirements. An illustrative numerical plot is not a substitute for the
+requirements and use bundled Inter fonts with sentence-case labels. Figures
+are exported as 600-dpi PNGs and vector SVG/PDF files. Keep the full repository
+checkout to regenerate plots, which share `plot_style.py` and `assets/fonts/`. An illustrative numerical plot is not a substitute for the
 all-index Lean theorem. The domination plot explicitly displays certified
 inequalities instead of inventing an exact coefficient curve for a huge graph.
 

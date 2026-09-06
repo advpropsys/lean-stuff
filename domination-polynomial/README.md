@@ -24,6 +24,8 @@ increase followed by weak decrease, matching the Alikhani–Peng conjecture.
 
 ## Example and plots
 
+![An actual small graph from the construction](figures/graph_example.svg)
+
 See [the reproducible examples](examples/README.md) for the finite-field
 construction, the certified bounds for the actual counterexample, and a
 computable small illustration.

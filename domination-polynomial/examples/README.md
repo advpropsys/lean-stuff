@@ -4,6 +4,13 @@ The actual counterexample has **15,211,807,199,220,036,387,538,871,517,957 verti
 Its proof uses exact finite counting and bounds. We do not enumerate that graph
 or compute its complete coefficient sequence.
 
+![Graph examples](../figures/graph_example.svg)
+
+The graph visualization shows every vertex and edge of the `q=2, w=1`
+instance alongside the 14-vertex toy with a verified dominating set. These
+are construction illustrations; neither is a certified counterexample.
+[600-dpi PNG](../figures/graph_example.png) · [Vector PDF](../figures/graph_example.pdf)
+
 ![Certified coefficient valley](../figures/canonical_certified_valley.svg)
 
 ## The actual counterexample
@@ -102,13 +109,21 @@ python3 graph_example.py
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python make_plots.py
+.venv/bin/python plot_graph.py
 ```
 
 The first command uses only the standard library. It checks canonical adjacency
 queries and refusal to materialize the huge graph, checks the small graph's
 edge count, adjacency, symmetry and absence of loops, and compares the toy's
 two exact counting methods. It regenerates the three JSON files. The plotting
-command writes both SVG and PNG versions into `../figures/`.
+commands write 600-dpi PNG, SVG, and PDF versions into `../figures/`.
+The graph script also checks the complete saved edge list and verifies that the
+three highlighted controls dominate the 14-vertex graph.
 
 The figures were generated and visually inspected with Matplotlib 3.10.9.
-SVG preserves editable text; PNG is included for convenient sharing.
+All text and mathematical labels use the bundled Inter font; headings use
+sentence case. PNG exports are 600 dpi, SVG text is converted to vector paths,
+and PDF embeds the font. Keep the full repository checkout when regenerating:
+the scripts use [the shared plot style](../../plot_style.py) and
+[bundled Inter files](../../assets/fonts/inter/README.md). No system font
+installation is needed.
