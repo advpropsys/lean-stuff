@@ -24,7 +24,7 @@ assert bands[0][1] < jx < bands[1][0]
 fig, (ax, bx) = plt.subplots(2,1,figsize=(12,9),sharex=True,
     gridspec_kw={'height_ratios':[1,1.55]})
 fig.subplots_adjust(left=.12,right=.97,top=.86,bottom=.15,hspace=.35)
-fig.suptitle('A certified valley in domination counts',x=.12,ha='left',y=.97,
+fig.suptitle('Domination coefficient bounds',x=.12,ha='left',y=.97,
              fontsize=24,fontweight='bold')
 fig.text(.12,.92,r'Canonical graph: $q=2^{31}-1$, $w=256$, $n\approx1.52\times10^{31}$',fontsize=12)
 for a, (lo,hi), color, label in zip([ax,ax],bands,[BLUE,ORANGE],['$J_A$','$J_C$']):
@@ -37,7 +37,7 @@ ax.text(jx,.12,'Outside both bands:\ntotal probability $<2^{-189}$',ha='center',
 ax.set_ylim(0,.66)
 ax.set_yticks([0,1/3],['0','1/3'])
 ax.set_ylabel('Band mass bound')
-ax.set_title('Uniformly sample a dominating set; record its size.',loc='left',fontsize=12,pad=12)
+ax.set_title('Interval probabilities',loc='left',fontsize=12,pad=12)
 for (lo,hi), color, label in zip(bands,[BLUE,ORANGE],[r'some $i$ in $J_A$',r'some $k$ in $J_C$']):
     bx.axvspan(lo,hi,color=color,alpha=.08,lw=0)
     bx.hlines(-106,lo,hi,color=color,lw=3)
@@ -54,10 +54,10 @@ bx.set_xlim(-1.13,-.66)
 bx.set_xticks([-1.09,-.91,-.86,-.81,-.70])
 bx.set_xlabel(r'Centered size $(s-K)/b$, where $K=5b+L/2$')
 bx.set_ylabel(r'Bound on $\log_2 p_s$'+'\n'+r'$p_s=d_s/D(G,1)$')
-bx.set_title('Two coefficients exceed the middle coefficient; their exact positions are not computed.',
+bx.set_title('Coefficient bounds',
              loc='left',fontsize=12,pad=10)
-fig.text(.12,.04,'Inequality certificate, not an exact coefficient curve. Arrows indicate strict bounds.\n'
-         'Horizontal segments mark possible locations of the two existential coefficients.',fontsize=12,color='#555555')
+fig.text(.12,.04,'Each interval contains at least one coefficient above its marked bound.\n'
+         'Individual coefficient values are not computed.',fontsize=12,color='#555555')
 save_figure(fig, OUT/'canonical_certified_valley')
 plt.close(fig)
 
@@ -65,16 +65,15 @@ toy=json.loads((HERE/'toy_coefficients.json').read_text())
 y=toy['coefficients']; x=range(len(y))
 fig, ax=plt.subplots(figsize=(12,6.4))
 fig.subplots_adjust(left=.11,right=.97,top=.79,bottom=.22)
-fig.suptitle('A small, inspectable example of the gadget',x=.11,ha='left',y=.97,fontsize=23,fontweight='bold')
-fig.text(.11,.87,'14 vertices: 5 clique controls and 9 degree-two clones. This example is unimodal.',fontsize=12)
+fig.suptitle('Domination counts for the 14-vertex graph',x=.11,ha='left',y=.97,fontsize=23,fontweight='bold')
+fig.text(.11,.87,'A unimodal sequence, computed exactly.',fontsize=12)
 ax.bar(x,y,color=BLUE,width=.72)
 ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 ax.set_xlabel('Dominating-set size $s$')
 ax.set_ylabel('Exact count $d_s$')
 ax.grid(axis='y',color='#dddddd',lw=.6)
 ax.set_axisbelow(True)
-fig.text(.11,.06,'Illustration only — not a counterexample. Counts agree between the exact gadget formula\n'
-         'and independent enumeration of all 16,384 vertex subsets.',fontsize=12,color='#555555')
+fig.text(.11,.06,'Counts checked by enumerating all 16,384 vertex subsets.',fontsize=12,color='#555555')
 save_figure(fig, OUT/'toy_exact_coefficients')
 plt.close(fig)
 print('Wrote canonical bound plot and exact toy plot, each as 600-dpi PNG, SVG and PDF in Inter.')

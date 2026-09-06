@@ -6,9 +6,9 @@ or compute its complete coefficient sequence.
 
 ![Graph examples](../figures/graph_example.svg)
 
-The graph visualization shows every vertex and edge of the `q=2, w=1`
-instance alongside the 14-vertex toy with a verified dominating set. These
-are construction illustrations; neither is a certified counterexample.
+The left panel is the `q=2, w=1` graph. The right panel is the 14-vertex
+graph, with dominating set {3, 4, 5} highlighted. The smaller graph is unimodal;
+the larger graph’s domination coefficients have not been computed.
 [600-dpi PNG](../figures/graph_example.png) · [Vector PDF](../figures/graph_example.pdf)
 
 ![Certified coefficient valley](../figures/canonical_certified_valley.svg)
@@ -74,7 +74,7 @@ is plotted in the centered coordinate `(j−K)/b`, approximately `−0.86`.
 The script transcribes the proof bounds; it does not rerun Lean or independently
 establish the full inequalities.
 
-## Small examples for inspection
+## Small graphs
 
 - `q2_graph.json`: the same projective construction with `q=2`, `w=1`,
   **182 vertices and 889 edges**. Labels and the complete edge list are saved.

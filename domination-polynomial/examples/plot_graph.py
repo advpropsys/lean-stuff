@@ -103,10 +103,8 @@ def main():
     fig.subplots_adjust(left=.035, right=.975, bottom=.17, top=.77, wspace=.13)
     grid = fig.add_gridspec(1, 2, width_ratios=[1.25, 1])
     ax, bx = fig.add_subplot(grid[0]), fig.add_subplot(grid[1])
-    fig.text(.055, .94, 'The graph behind the construction',
+    fig.text(.055, .94, 'Domination graph examples',
              fontsize=24, weight='bold', color=INK)
-    fig.text(.055, .895, 'Small instances reveal the controls, clones and domination rule.',
-             fontsize=12.5, color=MUTED)
 
     segment_collection(ax, edges[:595], positions,
                        colors=MUTED, linewidths=.34, alpha=.14, zorder=1)
@@ -149,12 +147,12 @@ def main():
     for i in range(t):
         bx.text(*toy_positions[i], str(i+1), ha='center', va='center',
                 color='white', fontsize=8.5, weight='bold', zorder=5)
-    bx.set_title('A dominating set you can inspect', loc='left', fontsize=16,
+    bx.set_title('Dominating set {3, 4, 5}', loc='left', fontsize=16,
                  fontweight='bold', color=INK, pad=26)
-    bx.text(0, 1.04, '14 vertices · 28 edges · 3 selected controls',
+    bx.text(0, 1.04, '14 vertices · 28 edges',
             transform=bx.transAxes, fontsize=11, color=MUTED)
-    bx.text(.5, -.055, 'The three ringed vertices dominate the graph.\n'
-            'Each other vertex has a highlighted edge to one of them.',
+    bx.text(.5, -.055, 'Orange edges connect each remaining vertex\n'
+            'to one of the selected vertices.',
             ha='center', va='top', transform=bx.transAxes, fontsize=10, color=MUTED,
             linespacing=1.55)
 
@@ -163,10 +161,8 @@ def main():
         axis.set_xlim(-1.74, 1.74)
         axis.set_ylim(-1.74, 1.74)
         axis.axis('off')
-    fig.text(.055, .055, 'Every edge is shown. Controls form a clique; each clone has exactly two control neighbors.',
-             fontsize=10.5, color=INK)
-    fig.text(.055, .025, 'Construction illustrations only. The 14-vertex example is unimodal; neither panel is a certified counterexample.',
-             fontsize=9.5, color=MUTED)
+    fig.text(.055, .04, 'The 14-vertex graph is unimodal. The 182-vertex graph’s coefficients have not been computed.',
+             fontsize=10.5, color=MUTED)
     output = HERE.parent/'figures'/'graph_example'
     save_figure(fig, output)
     plt.close(fig)
