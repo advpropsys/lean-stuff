@@ -14,3 +14,9 @@ This refutes the literal integer-budget Conjecture 1.6 in [arXiv:1611.03196v1](h
 
 The cited preprint and author manuscript define the scope of this correction. The final publisher wording has not been verified. The finite P₇ statement, including arbitrary negative integer budgets, is fully proved in Lean.
 [Proof](https://github.com/advpropsys/lean-stuff/blob/main/fair-representation-p7/proof.md) · [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/fair-representation-p7/Research) · [Build and audit](https://github.com/advpropsys/lean-stuff/blob/main/fair-representation-p7/REPRODUCE.md) · [Executable example](https://github.com/advpropsys/lean-stuff/blob/main/fair-representation-p7/example.py)
+
+## Conjecture and sources
+
+**Fair representation by independent sets in paths, integer-budget formulation.** Ron Aharoni, Noga Alon, Eli Berger, Maria Chudnovsky, Dani Kotlar, Martin Loebl and Ran Ziv, [*Fair representation by independent sets*](https://arxiv.org/abs/1611.03196v1), arXiv:1611.03196v1 (2016), Section 1.3, **Conjecture 1.6, page 3** ([PDF](https://arxiv.org/pdf/1611.03196v1#page=3)). The P₇ example above contradicts that version's simultaneous integer-budget conditions.
+
+Meysam Alishahi and Frédéric Meunier, [*Fair splitting of colored paths*](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v24i3p41/pdf/), The Electronic Journal of Combinatorics 24(3) (2017), P3.41 ([preprint](https://arxiv.org/abs/1704.02921)), prove a different formulation. Their theorem is not contradicted by this example.

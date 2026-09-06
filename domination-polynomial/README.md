@@ -14,6 +14,12 @@ The canonical graph has **15,211,807,199,220,036,387,538,871,517,957 vertices**.
 Adjacency is defined by arithmetic over a finite field. The proof does not
 enumerate the graph or its coefficients.
 
+## Conjecture and source
+
+**Alikhani–Peng domination-polynomial unimodality conjecture.** For every finite simple graph, the coefficients of its domination polynomial form a unimodal sequence.
+
+Saeid Alikhani and Yee-hock Peng, [*Introduction to Domination Polynomial of a Graph*](https://arxiv.org/abs/0905.2251), arXiv:0905.2251v1 (2009), Section 3, **unnumbered conjecture on page 7** ([PDF](https://arxiv.org/pdf/0905.2251v1#page=7)). Journal reference: [Ars Combinatoria 114 (2014), 257–266](https://combinatorialpress.com/ars-articles/volume-114-ars-articles/introduction-to-domination-polynomial-of-a-graph/). The quoted formulation is verified against the preprint.
+
 ## Theorems
 
 - `Research.DominationCounterexample.canonical_not_unimodal`

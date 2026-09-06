@@ -19,3 +19,7 @@ SVG/PDF. To regenerate: keep the full repository checkout, install
 [requirements-plot.txt](https://github.com/advpropsys/lean-stuff/blob/main/motzkin-root-log-concavity/requirements-plot.txt), and run `python3 plot.py`. The script uses
 [the shared style](https://github.com/advpropsys/lean-stuff/blob/main/plot_style.py) and [bundled fonts](https://github.com/advpropsys/lean-stuff/blob/main/assets/fonts/inter/README.md);
 no system font installation is required.
+
+## Conjecture and source
+
+**Zhao's log-concavity conjecture for roots of alternating Motzkin sums.** Feng-Zhen Zhao, [*The log-balancedness of the sequence for the alternating sums of Motzkin numbers*](https://math.colgate.edu/~integers/aa55/aa55.pdf), Integers 26 (2026), A55, **Section 3, Conjecture 1, page 8**. The conjecture states that the sequence (Tₙ^(1/n))ₙ≥₉ is log-concave. The Lean theorem proves strict log-concavity with the sharp starting index 5.

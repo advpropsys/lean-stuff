@@ -10,3 +10,9 @@ This is a correction to the bound **as printed**, not a disproof of the correctl
 
 Lean verifies the graph, adjacency matrix, characteristic polynomial, full root multiset and contradiction. Source: [DOI 10.30538/oms2025.0261](https://doi.org/10.30538/oms2025.0261).
 [Proof](https://github.com/advpropsys/lean-stuff/blob/main/graph-energy-p4/proof.md) · [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/graph-energy-p4/Research) · [Build and audit](https://github.com/advpropsys/lean-stuff/blob/main/graph-energy-p4/REPRODUCE.md) · [Executable example](https://github.com/advpropsys/lean-stuff/blob/main/graph-energy-p4/example.py)
+
+## Statement and source
+
+**Printed spectral-energy lower bound, Remark 1.** Akbar Jahanbani and Ivan Gutman, [*Exact variance-energy relations and optimal spectral bounds for graphs*](https://pisrt.org/psr-press/journals/oms/01-vol-9-2025-issue-1/exact-variance-energy-relations-and-optimal-spectral-bounds-for-graphs/), Open Journal of Mathematical Sciences 9 (2025), 301–307, **Remark 1, page 302** ([PDF](https://pisrt.org/psrpress/j/oms/2025/exact-variance-energy-relations-and-optimal-spectral-bounds-for-graphs.pdf#page=2)); DOI [10.30538/oms2025.0261](https://doi.org/10.30538/oms2025.0261).
+
+The refuted statement is a printed bound, not a conjecture. The paper's separate conjecture on nonsingular graphs is outside this result's scope.

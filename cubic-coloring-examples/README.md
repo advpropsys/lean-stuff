@@ -8,3 +8,9 @@ For a finite simple graph, a proper coloring assigns different colors to adjacen
 
 All three statements are proved in Lean. These are known examples and a conditional lemma; they establish no general coloring bound for arbitrary cubic graphs (graphs with degree three at every vertex). The Heawood example establishes that a monochromatic line in every two-coloring of the Fano points does not prevent a proper 2-homogeneous coloring of its incidence graph.
 [Proof](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/proof.md) · [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/cubic-coloring-examples/Research) · [Build and audit](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/REPRODUCE.md) · [Executable example](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/example.py)
+
+## Problem and source
+
+**Lužar–Soták four-color problem for 2-homogeneous cubic colorings.** If a cubic graph admits a proper 2-homogeneous coloring, must it admit one with at most four colors? These examples do not resolve that general question.
+
+Borut Lužar and Roman Soták, “Homogeneous coloring of cubic graphs,” Section 5, **Problem 5.1**, in [*Open problems of the 33rd Workshop on Cycles and Colourings*](https://arxiv.org/html/2511.02892v1#S5), arXiv:2511.02892v1 (2025). The paper attributes the bipartite special case to M. Janicová, T. Madaras, R. Soták and B. Lužar, *From NMNR-coloring of hypergraphs to homogenous coloring of graphs*, Ars Mathematica Contemporanea 12(2) (2017), 351–360.
