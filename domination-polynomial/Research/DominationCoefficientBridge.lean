@@ -2,8 +2,8 @@ import Research.DominationCanonicalPartition
 import Research.DominationSizeIntervals
 import Research.DominationCoefficientCounts
 
-/-! Final coefficient bridge for the actual canonical graph. The only remaining
-hypotheses in the final theorems are its indicated finite interval fractions. -/
+/-! Nonunimodality of the canonical graph follows from the finite interval
+fraction bounds stated as hypotheses below. -/
 namespace Research.DominationCoefficientBridge
 
 open Research.DominationCanonicalPartition Research.DominationParameters
@@ -56,8 +56,8 @@ theorem interval_card_gap (I : Finset (Fin (n + 1))) :
       mul_le_mul_of_nonneg_right hcard (by positivity)
     _ < 1 / 3 := by norm_num
 
-/-- Actual interval fractions and the actual center fraction imply ordinary
-nonunimodality of the canonical graph's domination coefficients. -/
+/-- Bounds on the interval fractions and center fraction imply nonunimodality
+of the canonical graph's domination coefficients. -/
 theorem not_unimodal_of_center_fraction
     (hleft : (1 / 3 : ℝ) < (Nat.card {S : DomSet // LeftInterval (size S)} : ℝ) / D)
     (hright : (1 / 3 : ℝ) < (Nat.card {S : DomSet // RightInterval (size S)} : ℝ) / D)
@@ -83,7 +83,7 @@ theorem not_unimodal_of_center_fraction
   · exact interval_card_gap leftIndices
   · exact interval_card_gap rightIndices
 
-/-- A center-size set lies outside both established size intervals. -/
+/-- The size j is outside both coefficient intervals. -/
 theorem center_card_le_outside : Nat.card {S : DomSet // size S = j} ≤
     Nat.card {S : DomSet // ¬ LeftInterval (size S) ∧ ¬ RightInterval (size S)} := by
   have h := Fintype.card_le_of_injective
@@ -97,8 +97,8 @@ theorem center_card_le_outside : Nat.card {S : DomSet // size S = j} ≤
         ¬ LeftInterval (size S) ∧ ¬ RightInterval (size S)} => S.val) heq)
   simpa only [Fintype.card_eq_nat_card] using h
 
-/-- The outside-union fraction is the natural output of the phase/noise proof;
-this theorem closes its last probability-to-coefficient step. -/
+/-- Bounds on the fractions inside and outside the two size intervals imply
+nonunimodality of the domination coefficients. -/
 theorem not_unimodal_of_outside_fraction
     (hleft : (1 / 3 : ℝ) < (Nat.card {S : DomSet // LeftInterval (size S)} : ℝ) / D)
     (hright : (1 / 3 : ℝ) < (Nat.card {S : DomSet // RightInterval (size S)} : ℝ) / D)

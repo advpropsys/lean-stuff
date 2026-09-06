@@ -1,6 +1,6 @@
 # Smaller parameters for the projective domination construction
 
-2026-09-06. This is a smaller member of the same construction and ordinary proof argument. The coordinator independently read the changed entropy, phase, noise and interval estimates and reran all 33 exact scalar checks successfully. The full graph theorem is not yet verified in Lean. The canonical manuscript and Lean constants have not been changed. No graph enumeration or domination-coefficient search was used.
+2026-09-06. This member uses the [projective graph construction](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_projective_counterexample_proof.md) with smaller parameters. The entropy, phase, noise, and interval estimates were reviewed, and all 33 exact scalar checks passed. The scalar and analytic estimates are formalized in Lean; the full graph theorem is not. The canonical theorem uses Q=2147483647 and w=256.
 
 The improved member uses
 
@@ -16,7 +16,7 @@ Its order is over **343 million times smaller** than the canonical member. The g
 
 Let Q be a prime, b=Q²+Q+1, and w a positive even integer. Put t=5b, L=wb(6Q+9), and K=t+L/2. Choose an omission minority threshold 0<ε<1/4 and positive deviations a,c,r. Here a is the left omitted-vertex deviation from b, c the right deviation from 3b/4, and r the clone deviation from L/2, all in units of b.
 
-The following conditions suffice for the manuscript's argument:
+The following conditions suffice for the projective proof:
 
 1. **Disperser:** Q<(Q+1)²ε².
 2. **Entropy:** let E be an explicit upper bound for h(ε)+ε log3. Require η=min(a²−E,2c²−E,log4−2E)>0. Then the total bad hard-model probability is at most δ_H=5exp(−ηb).
@@ -36,7 +36,7 @@ Their lengths are (2a+ε+2r)b and (2c+2ε+2r)b. If each length is at most b, eac
 
 Any integer strictly in the gap then has smaller probability than some coefficient on each side. These are sufficient bounds rather than an optimized characterization. They keep all finite-penalty configurations and all rounding effects.
 
-The underlying scaling is useful: the clone exponent is approximately r²Q/(3w), while the peak probability need only be of order Q^(−2). The soft bound therefore asks for w roughly greater than 4log₂Q, rather than the approximately 5log₂Q required by pigeonholing over the whole graph. Increasing r helps quadratically, but the entropy and phase-gap inequalities limit it.
+The parameter dependence is as follows: the clone exponent is approximately r²Q/(3w), while the peak probability need only be of order Q^(−2). The soft bound therefore requires w roughly greater than 4log₂Q, rather than the approximately 5log₂Q required by pigeonholing over the whole graph. Increasing r helps quadratically, but the entropy and phase-gap inequalities limit it.
 
 ## Exact choices and hard-model tails
 
@@ -54,7 +54,7 @@ For entropy, the elementary bound gives
     h(ε)+ε log3 ≤ ε[1+log(3/ε)]
                     = [1+log4500]/1500 < 19/3000.
 
-The last inequality follows from log4500<17/2. One entirely rational check proves it: e>65/24>27/10, and 27^17>4500²·10^17. Then
+The last inequality follows from log4500<17/2. A rational verification is: e>65/24>27/10, and 27^17>4500²·10^17. Then
 
     a²−E=1/15000,
     2c²−E>1/15000,
@@ -64,11 +64,11 @@ Using log4≥1, all three hard-model errors are bounded by 5exp(−b/15000). Sin
 
     δ_H <5·2^(−110)<2^(−100).
 
-The same phase symmetry and counting argument as in the manuscript applies. Good left configurations omit between (1−a)b and (1+a+ε)b controls; good right configurations omit between (3/4−c)b and (3/4+c+2ε)b controls. These are actual finite hard-model counts, not independent assumptions about variables under conditioning.
+The same phase symmetry and counting argument in the projective proof applies. Good left configurations omit between (1−a)b and (1+a+ε)b controls; good right configurations omit between (3/4−c)b and (3/4+c+2ε)b controls. These are actual finite hard-model counts, not independent assumptions about variables under conditioning.
 
 ## Exact soft and optional-vertex errors
 
-The finite cleanup comparison is unchanged. With w=100,
+The finite deletion comparison is unchanged. With w=100,
 
     t2^(−100)<1/2,
     δ_S≤2t2^(−100)=10b·2^(−100)<2^(−52).
@@ -119,11 +119,11 @@ whereas the middle index has probability below 2^(−51). This gives a strict va
 
 ## Exact scalar certificate
 
-`domination_simplification_certificate.py` checks all 33 finite scalar claims above using integers and rational arithmetic, and saves the full parameters and checks in its matching JSON. It includes complete trial division for Q, the entropy power inequality, all three hard tail margins, the soft bound, the clone exponent and power bound, phase-mass arithmetic, interval endpoints and cardinality widths, and both floor comparisons. It passed with exit code 0. No graph adjacency list or coefficient list was generated.
+[The scalar-check script](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/experiments/domination_simplification_certificate.py) checks all 33 finite scalar claims above using integers and rational arithmetic, and saves the full parameters and checks in [the parameter and check record](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/experiments/domination_simplification_certificate.json). It includes complete trial division for Q, the entropy power inequality, all three hard tail margins, the soft bound, the clone exponent and power bound, phase-mass arithmetic, interval endpoints and cardinality widths, and both floor comparisons. It passed with exit code 0. No graph adjacency list or coefficient list was generated.
 
 The preliminary candidate w=112 was also sufficient, but w=100 simplifies the multiplicity and reduces the order further while retaining the same five-bit probability gap. This study makes no claim that the selected parameters minimize the graph order.
 
-## Could the auxiliary graph be simpler?
+## Permutation-based auxiliary graphs
 
 A symmetric graph built from permutations can replace the projective geometry in an existence proof. Take d independent uniformly random permutations π_i of [b], and put both edges x_L–π_i(x)_R and π_i(x)_L–x_R in H, suppressing duplicates. H is symmetric, has maximum degree at most 2d, and has no isolated vertices.
 
@@ -131,6 +131,6 @@ For fixed sets A,B of size k=ceil(εb), the probability all permutation edges av
 
     2log binom(b,k) < dk²/b.
 
-This is substantially sharper than a union bound over all 4^b pairs. One may use a binary-entropy bound to choose d of order ε^(−1)log(1/ε), then increase b until the clone concentration inequality holds. The number of F-edges is at most b(12d+3), so all subsequent estimates can use that upper bound even when suppressed duplicates make H irregular. The exact local-state side-swap still holds because H is symmetric.
+This bounds the number of pairs by binom(b,k)^2 instead of 4^b. A binary-entropy bound permits d of order ε^(−1)log(1/ε), followed by b large enough for the clone concentration inequality. The number of F-edges is at most b(12d+3), so all subsequent estimates can use that upper bound even when suppressed duplicates make H irregular. The exact local-state side-swap holds because H is symmetric.
 
-This is a rigorously justified alternate existence mechanism, but this study has not certified a complete numerical member for it. A lexicographically first successful permutation tuple gives a finite definition, yet is less transparent as an evaluable adjacency rule and currently less convenient for Lean than the projective graph whose geometry component has now been formalized. It is therefore not proposed as a canonical replacement here. No claim that a particular untested permutation tuple is a disperser is made.
+The [permutation extension](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_permutation_extension.md) gives numerical parameters and an existence proof based on this bound. A lexicographically first qualifying tuple defines a finite graph, but no such tuple has been generated. The extension is not formalized in Lean.

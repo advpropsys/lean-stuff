@@ -1,9 +1,9 @@
 import Mathlib
 
-/-! Reusable analytic bounds for the domination manuscript. These results do
-not construct the graph or identify a counting distribution with a product
-measure. All independence, measurability and boundedness hypotheses appear
-explicitly below. -/
+/-! Analytic bounds for domination-set counts.
+Independence, measurability and boundedness are explicit hypotheses. The graph
+construction and the identification of counting distributions with product
+measures are proved in separate modules. -/
 
 open MeasureTheory ProbabilityTheory Finset
 open scoped NNReal
@@ -48,7 +48,7 @@ theorem bounded_sum_abs_tail {Ω ι : Type*} [MeasurableSpace Ω]
   simpa using hh
 
 /-- An exact finite weighted-binomial lower-tail bound. The parameter z is
-the exponential tilt used in the manuscript's minority-cell entropy bound.
+the exponential tilt in the minority-cell entropy bound.
 There are no probability or integrality assumptions on the real cutoff r. -/
 theorem weighted_binomial_lower_tail (b : ℕ) (c z r : ℝ)
     (hc : 0 ≤ c) (hz : 0 < z) (hz1 : z ≤ 1) :
@@ -117,7 +117,7 @@ private theorem log_29997_lt : Real.log 29997 < (43 : ℝ) / 4 := by
   norm_num at hm
   linarith
 
-/-- The manuscript's explicit minority-state estimate, valid for every b.
+/-- The minority-state estimate, valid for every b.
 The weak inequality also covers b=0. -/
 theorem minority_states_bound (b : ℕ) :
     (∑ i ∈ (range (b + 1)).filter (fun i : ℕ => (i : ℝ) ≤ (b : ℝ) / 10000),

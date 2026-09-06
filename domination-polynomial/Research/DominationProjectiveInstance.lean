@@ -1,9 +1,8 @@
 import Research.DominationParameters
 import Research.DominationProjectiveGeometry
 
-/-! The canonical projective incidence structure, with numerical hypotheses
-fully discharged. This is a construction/expansion theorem, not yet the final
-nonunimodality theorem. -/
+/-! The canonical projective incidence structure and its expansion bound.
+Nonunimodality is proved in `Research.DominationCounterexample`. -/
 namespace Research.DominationProjectiveInstance
 
 open DominationParameters DominationProjectiveGeometry

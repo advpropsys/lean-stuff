@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Succinct canonical graph and small inspectable examples (standard library only)."""
+"""Adjacency queries for the canonical graph and exact finite examples."""
 from dataclasses import dataclass
 from itertools import combinations
 from math import comb, isqrt
@@ -22,11 +22,11 @@ class Clone:
     copy: int
 
 class ProjectiveDominationGraph:
-    """Implicit graph: labels and adjacency work without enumerating vertices.
+    """Vertex labels and adjacency queries without graph enumeration.
 
     q must be prime. Labels of clones use lexicographically ordered endpoints.
     The default is the Lean-verified counterexample; small parameters illustrate
-    its definition but are NOT asserted to be counterexamples.
+    its definition but are not asserted to be counterexamples.
     """
     def __init__(self, q=CANONICAL_Q, w=CANONICAL_W):
         if q < 2 or any(q % d == 0 for d in range(2, isqrt(q) + 1)):
@@ -118,7 +118,7 @@ def gadget_coefficients(t, aux_edges, w):
 
 
 def brute_domination_coefficients(t, aux_edges, w):
-    """Independent exhaustive check of the tiny example on final graph vertices."""
+    """Count dominating subsets of the final graph by exhaustive enumeration."""
     n = t+w*len(aux_edges)
     assert n <= 20
     neighborhoods = [(1 << t)-1 for _ in range(t)]
@@ -161,7 +161,7 @@ def main():
         raise AssertionError('canonical materialization must be refused')
     except ValueError:
         pass
-    # Query genuine canonical vertices without expanding the graph.
+    # Check adjacency of canonical vertices without graph enumeration.
     u, v = Control('L',0,0), Control('R',g.q*g.q,0)
     x = Clone(u,v,0)
     assert g.auxiliary_adjacent(u,v) and g.valid_vertex(x) and g.adjacent(x,u)

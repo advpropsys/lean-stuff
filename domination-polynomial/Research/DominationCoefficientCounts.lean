@@ -1,7 +1,7 @@
 import Research.DominationValley
 
-/-! From exact finite size events to the coefficient sequence they count.
-These reusable lemmas do not assume a probability-to-coefficient identity. -/
+/-! Finite size-event counts and their coefficient sequence.
+The sum-to-event-count identity is proved below. -/
 noncomputable section
 attribute [local instance] Classical.propDecidable Classical.decEq
 
@@ -32,8 +32,8 @@ theorem sum_coefficients_real {Ω I : Type*} [Fintype Ω]
     (∑ i ∈ S, (coefficient size i : ℝ)) = (Nat.card {ω // size ω ∈ S} : ℝ) := by
   exact_mod_cast sum_coefficients size S
 
-/-- A normalized finite-event certificate gives ordinary coefficient
-nonunimodality, with the sharper actual-interval cardinality thresholds. -/
+/-- Normalized finite-event bounds imply coefficient nonunimodality.
+The thresholds depend on the numbers of indices in the two intervals. -/
 theorem not_unimodal_of_event_counts {Ω : Type*} [Fintype Ω] [Nonempty Ω]
     {n : ℕ} (size : Ω → Fin (n + 1))
     (S T : Finset (Fin (n + 1))) (j : Fin (n + 1)) (a c : ℝ)

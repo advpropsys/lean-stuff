@@ -9,7 +9,7 @@ EXPORT_DPI = 600
 
 
 def configure_style():
-    """Register bundled fonts; do not depend on fonts installed on the host."""
+    """Register bundled Inter fonts for text and mathematical labels."""
     for face in ("Regular", "Bold"):
         font_manager.fontManager.addfont(str(FONT_DIR / f"Inter-{face}.ttf"))
     mpl.rcParams.update({
@@ -39,7 +39,7 @@ def configure_style():
         "figure.facecolor": "white",
         "savefig.facecolor": "white",
         "savefig.dpi": EXPORT_DPI,
-        # Outline SVG glyphs so the exact Inter face survives sharing.
+        # Outline SVG glyphs to preserve Inter without requiring viewer fonts.
         "svg.fonttype": "path",
         "svg.hashsalt": "lean-stuff-inter-figures-v1",
         "pdf.fonttype": 42,

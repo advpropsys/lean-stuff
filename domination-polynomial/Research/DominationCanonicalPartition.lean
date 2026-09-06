@@ -2,8 +2,8 @@ import Research.DominationGadgetGraph
 import Research.DominationParameters
 import Research.DominationPartition
 
-/-! Actual dominating subsets and the fully instantiated soft error for the
-canonical projective split graph. No phase estimates are assumed or proved here. -/
+/-! Dominating subsets and the soft error bound for the canonical projective split
+graph. Phase estimates are proved in separate modules. -/
 namespace Research.DominationCanonicalPartition
 
 set_option maxRecDepth 1024
@@ -46,7 +46,7 @@ theorem size_le_n (S : DomSet) : size S ≤ n := by
 
 def sizeIndex (S : DomSet) : Fin (n + 1) := ⟨size S, Nat.lt_succ_of_le (size_le_n S)⟩
 
-/-- The coefficient counts actual dominating vertex subsets, not abstract states. -/
+/-- The coefficient counts dominating vertex subsets of each size. -/
 def coefficient (k : Fin (n + 1)) : ℕ := Fintype.card {S : DomSet // size S = k.val}
 
 theorem hard_count : Fintype.card HardDomSet = H * 2 ^ L := by
@@ -79,8 +79,8 @@ theorem nonhard_count : Fintype.card NonhardDomSet = D - Fintype.card HardDomSet
 theorem hard_count_le_D : Fintype.card HardDomSet ≤ D :=
   Fintype.card_subtype_le _
 
-/-- Every hypothesis of the generic finite soft error is discharged for the
-actual canonical graph; this is its exact non-hard counting fraction. -/
+/-- The finite soft error bound applied to the canonical graph gives an upper
+bound on the fraction of non-hard dominating sets. -/
 theorem nonhard_fraction_lt :
     (Fintype.card NonhardDomSet : ℝ) / D < 1 / (2 : ℝ) ^ 190 := by
   have hg := DominationPartition.nonhard_fraction_bound left right

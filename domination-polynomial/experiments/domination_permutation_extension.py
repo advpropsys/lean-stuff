@@ -16,7 +16,7 @@ epsilon, a, c, r = F(1,1500), F(2,25), F(57,1000), F(11,200)
 entropy, eta = F(19,3000), F(1,15000)
 soft, hard, noise = F(1,2**48), F(1,2**100), F(1,2**59)
 noise_exponent = 2*r*r*b*b/L_max
-# Offsets from K, so all comparisons hold for the unknown actual L as well.
+# Offsets from K make the comparisons independent of the qualifying tuple's value of L.
 ll, lh = -F(3407,3000)*b, -F(173,200)*b
 rl, rh = -F(259,300)*b, -F(319,500)*b
 projective_n = 44272117255374666459015

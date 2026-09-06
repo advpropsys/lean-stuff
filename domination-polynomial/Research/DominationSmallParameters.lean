@@ -1,8 +1,7 @@
 import Research.DominationParameters
 
-/-! Exact scalar and analytic certificates for the smaller projective
-candidate. This file does not assert its graph has a nonunimodal polynomial.
-The canonical construction and constants are unchanged. -/
+/-! Scalar and analytic bounds for the smaller projective candidate.
+These bounds do not establish nonunimodality of that graph's polynomial. -/
 
 noncomputable section
 namespace Research.DominationSmallParameters
@@ -56,7 +55,7 @@ theorem entropy_upper : ε * (1 + Real.log (3 / ε)) < E := by
   norm_num only [ε, E, div_div, div_one, OfNat.ofNat_ne_zero, mul_comm] at *
   linarith [log4500_lt]
 
-/-- Directly matches the generic minority-word entropy lemma's tilt. -/
+/-- The exponential tilt used in the minority-word entropy bound. -/
 theorem optimized_entropy_upper :
     Real.log (1 + (3 : ℝ) * (1 / 4497)) - ε * Real.log (1 / 4497) < E := by
   have hy : Real.log ((1500 : ℝ) / 1499) ≤ (1 : ℝ) / 1499 := by

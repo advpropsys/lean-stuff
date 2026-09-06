@@ -76,8 +76,9 @@ theorem weighted_injection_bound {X H V : Type*}
       rw [Fintype.sum_prod_type]
       simp [sum_removed_weights]
 
-/-- A cleanup witness suffices; injectivity follows from recovering the original
-configuration as the union of its cleaned set and its removed vertices. -/
+/-- A vertex-removal map gives the comparison bound. Injectivity follows by
+expressing each original configuration as the union of its edge-free remainder
+and its removed vertices. -/
 theorem soft_comparison_of_cleanup {V : Type*} [Fintype V] [DecidableEq V]
     (hardSets : Finset (Finset V)) (energy : Finset V → ℕ)
     (hcleanup : ∀ P : Finset V, ∃ I ∈ hardSets,

@@ -1,10 +1,10 @@
 # Supporting examples for homogeneous graph coloring
 
-A proper coloring is 2-homogeneous when each vertex sees exactly two colors among its neighbors. This folder proves:
+For a finite simple graph, a proper coloring assigns different colors to adjacent vertices. It is 2-homogeneous when each vertex's neighbors have exactly two colors. The proved statements are:
 
-- K₃,₃ requires four colors and has an explicit valid four-coloring.
-- The Heawood (Fano incidence) graph has a valid three-coloring, even though the Fano hypergraph has no property-B coloring.
+- The complete bipartite graph K₃,₃, with three vertices on each side, requires four colors for a 2-homogeneous coloring. Assigning colors [0,0,1] to one side and [2,2,3] to the other gives such a coloring.
+- The Heawood graph, whose vertices are the seven points and seven lines of the Fano plane with edges for incidence, has a proper 2-homogeneous three-coloring. The Fano hypergraph has no property-B coloring: every two-coloring of its points has a monochromatic line.
 - If every vertex has two adjacent neighbors, any **given** proper three-coloring is 2-homogeneous.
 
-These are known/supporting examples and a conditional lemma. They do not solve the general cubic-graph coloring conjecture. The Heawood example shows why failure of a restricted palette method cannot be treated as a graph counterexample.
-[Proof](proof.md) · [Lean sources](Research/) · [Build and audit](REPRODUCE.md) · [Executable example](example.py)
+All three statements are proved in Lean. These are known examples and a conditional lemma; they establish no general coloring bound for arbitrary cubic graphs (graphs with degree three at every vertex). The Heawood example establishes that a monochromatic line in every two-coloring of the Fano points does not prevent a proper 2-homogeneous coloring of its incidence graph.
+[Proof](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/proof.md) · [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/cubic-coloring-examples/Research) · [Build and audit](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/REPRODUCE.md) · [Executable example](https://github.com/advpropsys/lean-stuff/blob/main/cubic-coloring-examples/example.py)

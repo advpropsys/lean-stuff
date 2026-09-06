@@ -1,10 +1,10 @@
 import Research.DominationHardBandTransfer
 import Research.DominationCoefficientCounts
 
-/-! A verified reuse demonstration: the auxiliary ordinary control graph also
-has a nonunimodal independence polynomial. Nonunimodality of independence
-polynomials for general graphs is already known; this is not a new conjecture
-resolution. -/
+/-! The auxiliary control graph has a nonunimodal independence polynomial.
+This follows from the same hard-phase estimates used for domination counts.
+For nonunimodal independence polynomials, see Bhattacharyya and Kahn,
+https://arxiv.org/abs/1301.1752. -/
 namespace Research.DominationIndependenceCorollary
 open DominationParameters DominationGadgetGraph DominationCanonicalPartition
 open DominationIntervalMass DominationHardBandTransfer
@@ -14,7 +14,7 @@ set_option synthInstance.maxSize 1024
 set_option maxRecDepth 4096
 set_option exponentiation.threshold 1024
 
-/-- All ordinary independent subsets of the actual auxiliary graph. -/
+/-- All independent subsets of the auxiliary graph. -/
 abbrev IndependentSet := {P : Set Control //
   ∀ u ∈ P, ∀ v ∈ P, ¬ controlGraph.Adj u v}
 
@@ -101,7 +101,7 @@ theorem interval_gap (I : Finset (Fin (t+1))) :
     _ ≤ (2:ℝ)^65*(1/(2:ℝ)^300) := mul_le_mul_of_nonneg_right hi' (by positivity)
     _ < _ := by norm_num
 
-/-- A closed reuse corollary about the ordinary independence polynomial. -/
+/-- The auxiliary control graph's independence polynomial is nonunimodal. -/
 theorem control_independence_not_unimodal : ¬ DominationValley.Unimodal coefficient := by
   letI : Nonempty IndependentSet := ⟨⟨∅, by simp⟩⟩
   have he : coefficient = DominationCoefficientCounts.coefficient sizeIndex :=

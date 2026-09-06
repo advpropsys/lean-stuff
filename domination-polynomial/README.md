@@ -1,15 +1,20 @@
 # A Lean-verified domination-polynomial counterexample
 
-The explicitly defined connected simple graph in this package has an ordinary
-domination sequence that is not unimodal. The complete proof compiles in Lean;
-it does not assume the coefficient valley, projective geometry, counting
-identities, concentration estimates, or numerical inequalities.
+A dominating set of a graph G is a vertex subset such that every vertex outside
+it has a neighbor in it. Let d_k(G) count dominating sets of size k. The
+Alikhani–Peng conjecture asserts that these counts weakly increase to a mode
+and then weakly decrease.
+
+The connected simple graph defined here has indices i<j<k with
+**d_i(G)>d_j(G)<d_k(G)**, which disproves the conjecture.
+The Lean proof includes the graph definition, exact counting identities,
+concentration estimates, and coefficient inequalities.
 
 The canonical graph has **15,211,807,199,220,036,387,538,871,517,957 vertices**.
-Its finite-field adjacency rule is succinct. No full graph or coefficient list
-was enumerated.
+Adjacency is defined by arithmetic over a finite field. The proof does not
+enumerate the graph or its coefficients.
 
-## Main results
+## Theorems
 
 - `Research.DominationCounterexample.canonical_not_unimodal`
 - `Research.DominationCounterexample.canonical_connected_counterexample`
@@ -24,25 +29,23 @@ increase followed by weak decrease, matching the Alikhani–Peng conjecture.
 
 ## Example and plots
 
-![An actual small graph from the construction](figures/graph_example.svg)
+![Small graphs from the construction](https://raw.githubusercontent.com/advpropsys/lean-stuff/main/domination-polynomial/figures/graph_example.svg)
 
-See [the reproducible examples](examples/README.md) for the finite-field
-construction, the certified bounds for the actual counterexample, and a
-computable small illustration.
+The [examples](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/README.md) include the adjacency definition, a plot of
+the coefficient bounds, and exact counts for a 14-vertex graph.
 
-## Read the argument
+## Proof and references
 
-- [Accessible explanation and usefulness assessment](docs/domination_package_explanation.md)
-- [Complete ordinary proof](docs/domination_projective_counterexample_proof.md)
-- [Semantic audit of the formal theorem](docs/domination_formal_semantic_audit.md)
-- [Current literature and novelty audit](docs/domination_novelty_refresh_2026-09-06.md)
-- [General transfer argument](docs/domination_general_transfer.md)
+- [Construction and applications](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_package_explanation.md)
+- [Complete ordinary proof](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_projective_counterexample_proof.md)
+- [Semantic audit of the formal theorem](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_formal_semantic_audit.md)
+- [Sources and statement scope](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_novelty_refresh_2026-09-06.md)
+- [General transfer argument](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_general_transfer.md)
 
-The source search found no earlier ordinary-domination disproof. It does not
-certify publication priority or rule out unpublished work. The broader idea of
-balanced coefficient phases has prior literature, explicitly credited in the
-novelty audit. This repository publishes the proof artifacts; no journal submission or external
-peer review is claimed.
+The [source review](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_novelty_refresh_2026-09-06.md) records the
+conjecture's formulation, related constructions, and sufficient theorems.
+Publication priority is not certified. The sources have not undergone
+external peer review.
 
 ## Verify
 
@@ -57,12 +60,10 @@ lake env lean Audit.lean
 python3 verification/check_sources.py
 ```
 
-The project was also tested from a separate copied source
-directory with no pre-existing local Research build artifacts. That test reused
-the pinned external dependency caches, compiled all local proof modules, and
-passed. The transcript is in `verification/fresh_build.log`.
+[fresh_build.log](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/fresh_build.log)
+records successful compilation of every proof module against the pinned dependencies.
 
-`Audit.lean` prints the final theorem statements and their axiom dependencies.
+[Audit.lean](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/Audit.lean) prints the final theorem statements and their axiom dependencies.
 The source-check script checks hashes against the recorded source manifest;
 hashes alone are not a substitute for the Lean build.
 
@@ -74,16 +75,13 @@ hashes alone are not a substitute for the Lean build.
 | Smaller projective member | 44,272,117,255,374,666,459,015 | Audited ordinary argument; scalar and analytic bounds also proved in Lean |
 | Permutation-based family | At most 7,776,066,000,000,000,000 | Audited existence proof and exact scalar certificate; no qualifying tuple generated |
 
-See the [smaller projective study](docs/domination_simplification_study.md) and
-[permutation extension](docs/domination_permutation_extension.md). Their scripts
+See the [smaller projective study](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_simplification_study.md) and
+[permutation extension](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_permutation_extension.md). Their scripts
 are in `experiments/`. They check exact scalar inequalities, not graph searches.
-The smaller graph theorems are not claimed as fully formalized.
+The smaller graph theorems are not fully formalized.
 
-A separate [independence-polynomial corollary](docs/domination_independence_reuse.md)
-tests reuse of the proof components on a second ordinary graph statistic.
-That phenomenon is already known in the literature; this is a verified reuse
-demonstration, not a claim to resolve another open conjecture.
+A separate [independence-polynomial corollary](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_independence_reuse.md)
+uses the same counting lemmas for the auxiliary graph. Nonunimodal independence examples include
+[Bhattacharyya–Kahn's construction](https://arxiv.org/abs/1301.1752).
 
-The principal demonstrated value is mathematical and formal: an exact
-counterexample, a reproducible proof, and reusable counting components.
-No faster practical domination algorithm or engineering application is claimed.
+No faster domination algorithm or engineering application has been established.

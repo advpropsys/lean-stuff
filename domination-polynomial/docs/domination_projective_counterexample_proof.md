@@ -1,13 +1,8 @@
 # An explicit split graph with a non-unimodal domination sequence
 
-Research manuscript, 2026-09-05; formal verification completed 2026-09-06.
-The ordinary proof below has separate independent audits of the graph
-construction and quantitative counting. The full canonical graph theorem
-**passes Lean with no research assumptions or `sorry`**. The graph has a
-succinct exact adjacency rule; its enormous adjacency list and domination
-coefficient list have not been enumerated. Current literature searches found
-no prior resolution, but publication priority is not certified by a negative
-search. No external submission or announcement has been made.
+The proof defines a finite graph and derives exact counting and concentration
+bounds for its domination sequence. A [Lean formalization](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/Research/DominationCounterexample.lean)
+and [axiom report](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/repository_axioms.log) accompany the argument.
 
 ## Statement
 
@@ -25,7 +20,7 @@ ordinary, unweighted domination polynomial. The middle index j is specified
 below; the two larger coefficients are obtained by finite pigeonhole.
 
 The intended Alikhani–Peng conjecture asserts unimodality for every finite
-simple graph. Its current formulation is recorded in
+simple graph. The formulation is recorded in
 [Omar (2026)](https://arxiv.org/html/2601.14494v1) and independently in
 [Du–Heilman–Panova (2026), Conjecture 1.1](https://arxiv.org/html/2605.02193v1).
 Their log-concavity discussions concern a stronger, different property.
@@ -55,7 +50,7 @@ independent controls and each right cell with three controls forming a
 triangle. For every B-edge join its two left controls to its three right
 controls, adding all six edges. There are no other F-edges.
 
-Finally, G has these t=5b controls, now made into a clique, and, for every
+Finally, G has these t=5b controls, made into a clique, and, for every
 F-edge, w new vertices adjacent exactly to that edge's two controls.
 All new vertices are mutually nonadjacent. Distinct edge/clone labels give
 distinct vertices. This specifies a finite simple connected split graph.
@@ -167,7 +162,7 @@ bound follows, for example, from e>8/3 and 8^11>30000·3^11.
 The class O has at most T² configurations. Since log4≥1, its fraction among
 all hard configurations is at most exp(−0.9976b).
 
-We use the elementary binary-sum bound
+The binary-sum bound is
 
     Pr(|Y−E Y|≥u) ≤ 2exp(−2u²/r)
 
@@ -260,14 +255,14 @@ where n+1≤2^104 was checked exactly. Therefore i<j<k and both d_i,d_k
 strictly exceed d_j. A sequence that first weakly increases and then weakly
 decreases cannot have this pattern. This proves the statement.
 
-## Verification status and remaining work
+## Verification
 
-The [semantic audit](domination_formal_semantic_audit.md) checks the graph,
-geometry, and counting correspondences. The [Lean sources](../Research/)
+The [semantic audit](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_formal_semantic_audit.md) checks the graph,
+geometry, and counting correspondences. The [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/domination-polynomial/Research)
 prove the quantitative estimates and parameter inequalities. These arguments
 do not enumerate the graph or its coefficients.
 
-`Research.DominationCounterexample.canonical_not_unimodal` is now a closed
+`Research.DominationCounterexample.canonical_not_unimodal` is a closed
 Lean theorem about the actual graph's ordinary domination coefficients.
 `canonical_connected_counterexample` includes connectedness and the explicit
 vertex count. Both report only `propext`, `Classical.choice`, and `Quot.sound`

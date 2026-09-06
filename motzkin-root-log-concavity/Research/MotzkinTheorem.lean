@@ -1,7 +1,7 @@
 import Research.Motzkin
 import Research.MotzkinAnalysis
 
-/-! The analytic estimates applied to the actual alternating Motzkin sums. -/
+/-! Analytic estimates applied to the alternating Motzkin sums. -/
 namespace Research.Motzkin
 
 theorem T_real_positive (n : ℕ) (hn : 2 ≤ n) : 0 < (T n : ℝ) := by
@@ -99,7 +99,7 @@ theorem root_center5_reverse : (root 5)^2 < root 4 * root 6 := by
   norm_num
   convert center5_log_reverse using 1 <;> ring
 
-/-- The originally requested threshold follows from the stronger theorem. -/
+/-- The bound for centers n ≥ 10 follows from the bound for centers n ≥ 6. -/
 theorem zhao_conjecture (n : ℕ) (hn : 10 ≤ n) :
     root (n - 1) * root (n + 1) ≤ (root n)^2 :=
   le_of_lt (root_strict_log_concave n (by omega))

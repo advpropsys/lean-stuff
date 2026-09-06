@@ -2,10 +2,9 @@ import Research.DominationHardBandTransfer
 import Research.DominationCoefficientBridge
 import Research.DominationGadgetProperties
 
-/-! The complete canonical counterexample theorem. The coefficient function
-counts all ordinary dominating subsets of the explicitly constructed finite
-simple graph. Every phase, counting, geometry and numerical hypothesis is
-discharged by the imported proofs. -/
+/-! A connected finite simple graph with a nonunimodal domination polynomial.
+The coefficient function counts all ordinary dominating subsets. The imported
+proofs establish the phase, counting, geometry and numerical bounds. -/
 namespace Research.DominationCounterexample
 
 open DominationCanonicalPartition DominationIntervalMass DominationSizeIntervals

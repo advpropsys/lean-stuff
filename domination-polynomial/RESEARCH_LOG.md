@@ -1,16 +1,14 @@
-# Verification record
+# Verification
 
-- 2026-09-05: derived the projective-incidence construction and ordinary proof.
-- 2026-09-06: completed the graph, counting, concentration, and coefficient
-  comparison proofs in Lean. The closed connected-counterexample theorem
-  has no research hypotheses and only standard Lean axioms.
-- Rebuilt the local proof modules in a separate project with empty local build
-  artifacts, reusing pinned external dependency caches.
-- Verified all 29 recorded Lean source hashes and the final axiom report.
-- Checked smaller projective parameters and a permutation-based existence
-  construction. Their full graph theorems are not yet formalized.
-- Proved the independence-polynomial reuse corollary in Lean.
-- Conducted a dated primary-source novelty review; priority is not certified.
+The [connected-counterexample theorem](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/Research/DominationCounterexample.lean)
+has no research hypotheses. Its [axiom report](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/repository_axioms.log)
+contains only `propext`, `Classical.choice`, and `Quot.sound`.
 
-The compiler transcripts and requirement audit are in `verification/`. The
-proof, references, and scope of each extension are documented in `docs/`.
+The [build transcript](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/repository_build.log) records compilation
+of the graph, counting, concentration, and coefficient-comparison modules.
+The [source manifest](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/source_manifest.json) contains the source
+hashes. The [requirement table](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/verification/completion_audit.md) states the
+verification scope for each result.
+
+The smaller projective and permutation constructions have ordinary proofs
+and exact scalar checks. Their graph-level theorems are not formalized in Lean.

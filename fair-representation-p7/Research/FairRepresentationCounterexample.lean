@@ -45,8 +45,7 @@ theorem part_sizes : (parts 0).card = 3 ∧ (parts 1).card = 1 ∧
 
 theorem parts_independent : ∀ i, Independent (parts i) := by decide
 
-/-- The counterexample still satisfies the later, weaker formulation,
-with strict half-minus-one bounds in every part. -/
+/-- An independent set satisfying strict half-minus-one bounds in every part. -/
 theorem weaker_formulation_witness : Independent {0, 3, 6} ∧
     ∀ i, ((parts i).card : ℤ) <
       2 * ((({0, 3, 6} : Finset (Fin 7)) ∩ parts i).card : ℤ) + 2 := by decide

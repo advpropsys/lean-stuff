@@ -31,7 +31,7 @@ def Inc {F : Type*} [Field F] (p r : Point F) : Prop :=
 theorem inc_symm {F : Type*} [Field F] (p r : Point F) : Inc p r ↔ Inc r p := by
   simp only [Inc, mul_comm]
 
-/-- Every nonzero vector has a normalized representative from the actual finite type. -/
+/-- Every nonzero vector has a normalized representative in the finite point type. -/
 theorem normalized_exists {F : Type*} [Field F] (v : Fin 3 → F) (hv : v ≠ 0) :
     ∃ (p : Point F) (s : F), s ≠ 0 ∧ v = s • coord p := by
   by_cases h0 : v 0 = 0

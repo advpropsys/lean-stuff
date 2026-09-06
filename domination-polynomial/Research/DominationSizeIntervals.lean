@@ -24,7 +24,8 @@ def valleyIndex : Fin (n+1) := ⟨j, by have := valley_valid; omega⟩
 theorem K_cast : (K : ℝ) = (t : ℝ) + (L : ℝ)/2 := by
   norm_num [K, t, L, w, m, b, q]
 
-/-- Control omission in [0.92b,1.08b] plus good clone noise gives the left interval. -/
+/-- Omitted-control size in [0.92b,1.08b] and clone-count deviation at most b/100
+place the total selected size in the left interval. -/
 theorem left_of_sizes (p k : ℕ) (hp : p ≤ t)
     (hlo : 92*(b : ℝ)/100 ≤ p) (hhi : (p : ℝ) ≤ 108*(b : ℝ)/100)
     (hk : |(k : ℝ) - (L : ℝ)/2| ≤ (b : ℝ)/100) :
@@ -34,7 +35,8 @@ theorem left_of_sizes (p k : ℕ) (hp : p ≤ t)
   rw [Nat.cast_add, Nat.cast_sub hp, K_cast]
   constructor <;> linarith [hnoise.1, hnoise.2]
 
-/-- Control omission in [0.71b,0.80b] plus good clone noise gives the right interval. -/
+/-- Omitted-control size in [0.71b,0.80b] and clone-count deviation at most b/100
+place the total selected size in the right interval. -/
 theorem right_of_sizes (p k : ℕ) (hp : p ≤ t)
     (hlo : 71*(b : ℝ)/100 ≤ p) (hhi : (p : ℝ) ≤ 80*(b : ℝ)/100)
     (hk : |(k : ℝ) - (L : ℝ)/2| ≤ (b : ℝ)/100) :

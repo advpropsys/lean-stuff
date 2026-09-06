@@ -1,6 +1,6 @@
 import Mathlib
 
-/-! Finite balance survives discarding a bounded exceptional set. -/
+/-! Bounds on phase counts after removal of a bounded exceptional set. -/
 namespace Research.DominationPhaseBalance
 
 theorem good_card_lower {Ω : Type*} [Fintype Ω] [DecidableEq Ω]

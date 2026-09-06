@@ -1,10 +1,10 @@
 # Symmetric-permutation extension: complete numerical existence certificate
 
-This is an ordinary-proof extension of the audited domination construction.
+This is an ordinary-proof extension of the [projective domination construction](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_projective_counterexample_proof.md).
 It does not modify the canonical projective graph or its Lean proof. No
 permutation tuple has been generated. The output is existence of a finite
-simple connected graph, with an unambiguous but computationally impractical
-lexicographically first description if desired.
+simple connected graph, defined by a lexicographically first qualifying tuple. Evaluating that
+definition is computationally impractical.
 
 Take
 
@@ -15,8 +15,7 @@ Take
 
 The resulting graph has order at most
 `7776066000000000000 < 2^63`.
-This is at least 5693 times smaller than the previously audited projective
-member of order `44272117255374666459015`.
+This is at least 5693 times smaller than the [projective member](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_simplification_study.md) of order `44272117255374666459015`.
 
 ## 1. Exact auxiliary existence proof
 
@@ -54,9 +53,9 @@ permutations having this property, under the ordinary order on their image
 lists. Existence makes this definition total. The certificate neither lists
 that tuple nor claims efficient adjacency evaluation.
 
-## 2. Actual graph and order bounds
+## 2. Graph and order bounds
 
-Apply the same construction as in the projective manuscript: left cells
+Apply the same construction as in the [projective proof](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/docs/domination_projective_counterexample_proof.md): left cells
 are independent pairs, right cells are triangles; each B-edge supplies all
 six cross edges. Call this incidence graph F. Its t=5b vertices are the
 controls. There are
@@ -65,8 +64,7 @@ controls. There are
 
 Make the controls a clique. For every edge of F add w distinct independent
 clone vertices, adjacent exactly to that edge's endpoints. The resulting
-graph is simple and connected. Duplicate permutation arrows have already
-been collapsed; the indexed clones remain distinct graph vertices. All
+graph is simple and connected. Duplicate permutation arrows are collapsed; the indexed clones remain distinct graph vertices. All
 controls have an incident F-edge, as required by the domination partition.
 
 Write `L=wm`, `n=t+L`, and `K=t+L/2`. Because w is even, K is an integer for
@@ -75,7 +73,7 @@ every possible qualifying tuple. In particular,
 `L <= 7776064800000000000`,
 `n <= 7776066000000000000`.
 
-We do not assert equality: overlapping permutation arrows can reduce m.
+Equality need not hold because overlapping permutation edges can reduce m.
 All subsequent estimates use the upper bound for L and are uniform over
 all qualifying tuples.
 
@@ -103,7 +101,7 @@ the omission-size tail beyond `a b` from b is at most `2 exp(-a^2 b)`.
 The right microstates give Bin(b,3/4), whose deviation beyond `c b` has
 probability at most `2 exp(-2c^2 b)`. Multiplying by the minority count and
 dividing by the hard partition function, at least `4^b`, gives the hard
-phase estimates used in the manuscript. The both-small remainder is at
+phase estimates in the projective proof. The both-small remainder is at
 most `T^2/4^b`. Exact rational comparisons give
 
 `a^2-E >= 1/15000`,
@@ -115,7 +113,7 @@ Hence the total hard exceptional fraction is at most
 `5*2^-110 < 2^-100`. Each good hard phase has fraction greater than
 `1/2 - 2^-100`.
 
-The cleanup injection, valid for this actual F, gives
+The deletion injection for F gives
 `Zsoft/Zhard <= (1+rho)^t` with `rho=2^-90`.
 For `x=t rho<1/2`, the elementary estimates
 `(1+rho)^t <= exp(x) <= 1/(1-x) <= 1+2x`
@@ -131,7 +129,7 @@ Using the maximum L, the exponent is at least
 The exact rational comparison `2(10/27)^42 < 2^-59` certifies a noise error
 less than `2^-59`.
 
-Thus actual outside-good mass is less than
+The probability outside the good intervals is therefore less than
 
 `2^-48 + 2^-100 + 2^-59 < 2^-47`.
 
@@ -181,10 +179,10 @@ qualifying tuple's constructed graph.
 
 ## Verification and limits
 
-`domination_permutation_extension.py` uses integers and Python Fractions
+[The scalar-check script](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/experiments/domination_permutation_extension.py) uses integers and Python Fractions
 only. All 36 checks passed; its exact values and booleans are stored in the
-companion JSON. This is scalar checking of the displayed existence proof,
-not a graph/permutation sweep, and not a Lean formalization of this new
+[parameter and check record](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/experiments/domination_permutation_extension.json). This is scalar checking of the displayed existence proof,
+not a graph/permutation sweep, and not a Lean formalization of this
 member. The canonical projective Lean proof remains unchanged. No claim
 of a generated tuple, efficient construction, minimal order, or separate
 novelty audit is made.

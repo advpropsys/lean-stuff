@@ -10,12 +10,12 @@ An operational breadth-first construction with first-occurrence duplicate deleti
 Binary suffixes are stored least-significant-bit first; the leading 1 is implicit.
 The numerical interpretation below connects the implementation to x ↦ x+2, 2*x.
 
-Historical source: Clark Kimberling and Peter J. C. Moses, Fibonacci Quarterly
+Source: Clark Kimberling and Peter J. C. Moses, Fibonacci Quarterly
 52(5) (2014), pp. 136–150, https://www.mathstat.dal.ca/FQ/Papers1/52-5/Kimberling.pdf .
-Corollary 2.2 and equation (2.9) already establish the Fibonacci layer sizes and
-binary digit-weight characterization for the add-one/double tree. Those central
-mathematical facts are not claimed as new here. This file proves the operational
-odd-position corollary without assuming those facts as hypotheses.
+Corollary 2.2 and equation (2.9) establish the Fibonacci layer sizes and
+binary digit-weight characterization for the add-one/double tree.
+The odd-position formula is a corollary of those results. This file includes
+proofs of the layer sizes and digit-weight characterization.
 -/
 
 namespace Kimberling
@@ -222,7 +222,7 @@ theorem nodup_fresh {α : Type*} [DecidableEq α] (seen xs : List α) : (fresh s
     · simpa [fresh, hx] using ih seen
     · simp [fresh, hx, ih]
 
-/-- (all entries seen, current generation), starting at generation zero. -/
+/-- (all entries generated, current generation), starting at generation zero. -/
 def run : ℕ → List Vertex × List Vertex
   | 0 => ([odd 0, even []], [odd 0, even []])
   | n+1 =>
@@ -246,7 +246,7 @@ def generation (n : ℕ) : List Vertex := (run n).2
   | nil => simp [weight]
   | cons b bs => cases b <;> simp [weight]
 
-/-- Exact operational generation characterization; neither direction is assumed. -/
+/-- Characterization of each generation in the sequence construction. -/
 theorem run_membership (n : ℕ) :
     (∀ v, v ∈ seen n ↔ rank v ≤ n) ∧
     (∀ v, v ∈ generation n ↔ rank v = n) := by
@@ -345,7 +345,7 @@ theorem generation_perm (n : ℕ) :
   have h := (generation_perm n).length_eq
   simpa [Nat.add_comm] using h
 
-/-- Convenient subtraction-free count of all entries through generation n. -/
+/-- Subtraction-free count of all entries through generation n. -/
 theorem length_seen (n : ℕ) : (seen n).length + 1 = n+1+Nat.fib (n+3) := by
   induction n with
   | zero => norm_num

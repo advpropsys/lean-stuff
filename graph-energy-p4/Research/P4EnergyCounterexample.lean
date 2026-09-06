@@ -1,7 +1,7 @@
 import Mathlib
 
 /-! Exact counterexample to Remark 1, p.302 of Jahanbani--Gutman (2025).
-The energy is defined from the real roots of the actual adjacency characteristic
+The energy is defined from the real roots of the adjacency characteristic
 polynomial, counting multiplicity. This file does not assume the spectrum. -/
 set_option maxHeartbeats 1000000
 namespace P4EnergyCounterexample
@@ -122,7 +122,7 @@ theorem remark_one_is_false :
   have h24 := Real.sqrt_nonneg (24:ℝ)
   have h5n := Real.sqrt_nonneg (5:ℝ)
   nlinarith
-/-- The false inequality applied to the actual graph, with its actual edge/vertex counts. -/
+/-- The proposed inequality fails for the graph G. -/
 theorem graph_remark_one_is_false :
     ¬ graphEnergy G ≥ Real.sqrt
       (2 * (G.edgeFinset.card : ℝ) * Fintype.card (Fin 4) -

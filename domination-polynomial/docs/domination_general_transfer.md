@@ -1,8 +1,8 @@
 # A general transfer from independent-set sizes to domination coefficients
 
-Ordinary proof draft, 2026-09-06. This isolates a reusable implication from the
-current construction. It is not a claim of novelty for elementary mixture or
-pigeonhole arguments, and this full graph-level statement is not yet in Lean.
+Ordinary proof, 2026-09-06. The following implication extends the construction
+to other auxiliary graphs. The full graph-level statement is not formalized
+in Lean. Mixture and pigeonhole arguments are standard.
 
 Let F be a finite simple graph without isolated vertices, with t vertices and
 m edges. Fix a positive integer w. Build G by making the t controls a clique
@@ -44,30 +44,28 @@ probability at least (a−ξ)/M>h+ξ.
 Thus there exist i<j<k with ν(i)>ν(j)<ν(k). Multiplication by the positive
 number of dominating sets proves d_i(G)>d_j(G)<d_k(G).
 
-This theorem separates the work into three requirements:
+The hypotheses require:
 
 1. Find two sufficiently large, separated classes of independent-set sizes.
 2. Show that adding Binomial(L,1/2) noise preserves the separation.
 3. Choose w so the finite error ξ is small relative to 1/M.
 
-One may always take M=n+1, but using the actual interval widths can greatly
-improve the parameters. The coefficient-only implication with separate exact
+The bound M=n+1 always applies. Smaller interval-width bounds allow smaller
+graph parameters. The coefficient-only implication with separate exact
 cardinalities for both intervals is formalized as
 `DominationValley.not_unimodal_of_interval_mass_card`.
 
-Increasing w helps the third requirement but increases L and makes the second
-harder. This explicit tradeoff explains why simply adding more clones is not
-a general amplification argument.
+Increasing w decreases the finite error ξ and increases L, the variance
+parameter for the clone count. Both requirements must hold simultaneously.
 
 The projective-plane example supplies these hypotheses through balanced
 two-vertex/triangle cells and expansion. The transfer itself does not require
-a projective plane or those particular cells. This is the first useful target
-for an alternative construction: satisfy the same quantitative hypotheses
-with a simpler auxiliary F.
+a projective plane or those particular cells. Other auxiliary graphs F can
+be used if they satisfy the same quantitative hypotheses.
 
-A further extension is immediate at the level of this argument: if r ordered
+The argument also applies to more than two intervals: if r ordered
 intervals each have mass at least a, total mass outside their union is at
 most h, and each neighboring pair has an integer gap, the same strict
 inequality supplies r large coefficients separated by r−1 smaller ones.
-Constructing graphs that meet those r-phase hypotheses is an open research
-task here; no such domination family has been established by this note.
+No graph family satisfying these r-phase hypotheses for arbitrary r has been
+established here.

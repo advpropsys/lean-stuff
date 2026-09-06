@@ -1,4 +1,4 @@
-"""Exact illustrations of the universally proved polynomial obstruction."""
+"""Evaluate the obstruction polynomials at positive integer arguments."""
 def Q(q):
     return 9*q**4-14*q**3-30*q*q-14*q+1
 def H(q):

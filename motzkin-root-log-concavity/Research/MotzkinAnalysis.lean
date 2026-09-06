@@ -2,7 +2,7 @@ import Mathlib.Analysis.Complex.ExponentialBounds
 import Mathlib.Tactic
 
 /-! Analytic estimates for the alternating Motzkin root inequality.
-These lemmas are generic; the recurrence module must discharge their hypotheses.
+The recurrence module proves the hypotheses of these analytic lemmas.
 -/
 namespace Research.MotzkinAnalysis
 open Real

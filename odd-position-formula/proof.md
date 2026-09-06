@@ -1,8 +1,6 @@
 # A binary proof of the odd-position formula for A232895
 
-Research date: 2026-09-05. Status: complete proof; coordinator independently reviewed every step and found no gap, and derived a second proof using a potential on both odd and even vertices. This is internal agent review, not external peer review. No claim of publication priority is made.
-
-The sequence and its conjectural interpretation are defined in [OEIS A232895](https://oeis.org/A232895) and [OEIS A232896](https://oeis.org/A232896), checked on the research date. All arguments below are self-contained.
+The sequence and position formula are listed in [OEIS A232895](https://oeis.org/A232895) and [OEIS A232896](https://oeis.org/A232896). The proof and Lean formalization are complete.
 
 ## Theorem
 
@@ -56,4 +54,4 @@ This includes n=1 by the empty-sum convention. QED.
 
 ## Scope and limitations
 
-The argument proves the stated formula for every n; finite computations are only sanity checks. Independent review is still desirable. The current OEIS pages list the interpretation as conjectural, but that does not establish that this proof or result has never appeared elsewhere. This repository provides the local proof and formalization.
+The argument proves the stated formula for every n; finite computations check examples. The formula is a corollary of [Kimberling–Moses's tree theorem](https://www.mathstat.dal.ca/FQ/Papers1/52-5/Kimberling.pdf).

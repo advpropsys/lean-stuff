@@ -6,8 +6,8 @@ import Research.MotzkinFinite
 # Alternating Motzkin root inequality: recurrence and ratio bounds
 
 The definitions below use the standard Motzkin recurrence over the rationals.
-The universal conclusion is assembled in `Research.MotzkinTheorem`.
-This module proves the alternating-sum bridge, universal ratio enclosure, finite
+The universal inequality is proved in `Research.MotzkinTheorem`.
+This module proves the alternating-sum identity, universal ratio enclosure, finite
 logarithmic cases, and the conversion from logarithmic inequalities to real roots.
 -/
 namespace Research.Motzkin
@@ -222,7 +222,7 @@ theorem H_b_negative {k : ℚ} (hk : 9 ≤ k) : H k (b k) < 0 := by
   · nlinarith
   · positivity
 
-/-- The alternating-sum ratios are trapped between two consecutive Motzkin ratios. -/
+/-- Each alternating-sum ratio lies between two consecutive Motzkin ratios. -/
 theorem y_sandwich (n : ℕ) :
     x (n + 9) ≤ y (n + 9) ∧ y (n + 9) ≤ x (n + 10) := by
   induction n with
@@ -267,7 +267,7 @@ theorem y_enclosure (n : ℕ) :
     convert (x_bounds (n + 8)).2 using 1; push_cast; ring_nf
   exact ⟨hl.trans (y_sandwich n).1, (y_sandwich n).2.trans hu⟩
 
-/-- Generic exact-power certificate to logarithmic root concavity. -/
+/-- An exact-power inequality implies logarithmic root concavity. -/
 theorem log_concave_of_power {a c d : ℝ} (k : ℕ)
     (ha : 0 < a) (_hc : 0 < c) (hd : 0 < d)
     (hp : a ^ ((k + 2) * (k + 3)) * d ^ ((k + 2) * (k + 1)) <

@@ -1,9 +1,11 @@
 # Odd positions in the add-two/double sequence
 
-Start with the ordered generation (1,2). Process each generation from left to right, proposing x+2 then 2x, and retain only first occurrences. In the concatenated sequence, the **one-based position of 2n−1 is n−1+Fₙ₊₁ for every n≥1**.
+Start with the ordered generation G₁=(1,2). To construct Gₙ₊₁, process Gₙ from left to right. For each entry x, propose x+2 and then 2x. Append a proposed value only if it has not occurred in any previous generation or earlier in Gₙ₊₁. Concatenate G₁,G₂,… to form a sequence.
 
-The operational sequence and its stable prefix positions are formalized directly in `OddPositions.lean`. Source: [A232895](https://oeis.org/A232895), [A232896](https://oeis.org/A232896).
+Define F₀=0, F₁=1 and Fₙ₊₂=Fₙ₊₁+Fₙ for n≥0. In the concatenated sequence, the **one-based position of 2n−1 is n−1+Fₙ₊₁ for every integer n≥1**.
 
-The central Fibonacci tree count and binary characterization were already proved by [Kimberling–Moses (2014)](https://www.mathstat.dal.ca/FQ/Papers1/52-5/Kimberling.pdf). This exact position formula is a short corollary after reducing the seeds/parity. No originality claim is made for the underlying tree theorem. The formula lets one locate odd entries without generating the preceding exponentially growing generations.
+The operational sequence and its stable prefix positions are formalized directly in [OddPositions.lean](https://github.com/advpropsys/lean-stuff/blob/main/odd-position-formula/Research/OddPositions.lean). Source: [A232895](https://oeis.org/A232895), [A232896](https://oeis.org/A232896).
 
-[Proof](proof.md) · [Lean sources](Research/) · [Build and audit](REPRODUCE.md) · [Executable example](example.py)
+The position formula is a corollary of [Kimberling–Moses's Fibonacci tree count and binary characterization](https://www.mathstat.dal.ca/FQ/Papers1/52-5/Kimberling.pdf), applied to the two starting values and the even subsequence. It gives the positions of odd entries without generating the preceding exponentially growing generations.
+
+[Proof](https://github.com/advpropsys/lean-stuff/blob/main/odd-position-formula/proof.md) · [Lean sources](https://github.com/advpropsys/lean-stuff/tree/main/odd-position-formula/Research) · [Build and audit](https://github.com/advpropsys/lean-stuff/blob/main/odd-position-formula/REPRODUCE.md) · [Executable example](https://github.com/advpropsys/lean-stuff/blob/main/odd-position-formula/example.py)

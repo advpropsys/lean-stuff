@@ -80,7 +80,7 @@ def hardDominatingEquivSigma {C E : Type*} (w : ℕ) (left right : E → C) :
     apply (Subtype.heq_iff_coe_eq (by intro K'; simp only [omitted_selected])).2
     rfl
 
-/-- Hard configurations have exactly all clone choices available. -/
+/-- Every clone subset is valid for a hard configuration. -/
 theorem hard_dominating_count {C E : Type*} [Fintype C] [Fintype E] {w : ℕ}
     (left right : E → C) (hw : 0 < w)
     (hincident : ∀ c, ∃ e, c = left e ∨ c = right e) :
@@ -139,7 +139,7 @@ theorem labeled_soft_comparison {C E : Type*} [Fintype C] [Fintype E]
     (fun P => Fintype.card (inducedEdges left right P)) hinj hcost ρ hρ0 hρ1
 
 /-- Factoring out the common number of optional-clone configurations gives the
-exact real partition function of the actual dominating subsets. -/
+exact real partition function of dominating subsets. -/
 theorem dominating_count_normalized {C E : Type*} [Fintype C] [Fintype E] {w : ℕ}
     (left right : E → C) (hw : 0 < w)
     (hincident : ∀ c, ∃ e, c = left e ∨ c = right e) :
@@ -156,7 +156,7 @@ theorem dominating_count_normalized {C E : Type*} [Fintype C] [Fintype E] {w : �
   rw [pow_sub₀ (2 : ℝ) (by norm_num) (Nat.mul_le_mul_right w he), inv_pow, ← pow_mul]
   rw [Nat.mul_comm w]
 
-/-- Upper bound on the total count in terms of the actual hard dominating sets. -/
+/-- Upper bound on the total count in terms of the hard dominating sets. -/
 theorem dominating_count_le_hard_factor {C E : Type*} [Fintype C] [Fintype E] {w : ℕ}
     (left right : E → C) (hw : 0 < w)
     (hincident : ∀ c, ∃ e, c = left e ∨ c = right e) :
@@ -187,8 +187,8 @@ theorem count_conjunction_complement {A : Type*} [Fintype A] (p q : A → Prop) 
       Fintype.card_subtype_compl _
     _ = _ := by rw [Fintype.card_congr (Equiv.subtypeSubtypeEquivSubtypeInter p q)]
 
-/-- Exact finite uniform-measure soft error: the fraction of actual dominating
-sets whose omitted controls contain an indexed edge is at most the claimed factor. -/
+/-- Finite uniform-measure soft error: the fraction of dominating sets whose
+omitted controls contain an indexed edge is bounded by the soft-to-hard factor. -/
 theorem nonhard_fraction_bound {C E : Type*} [Fintype C] [Fintype E] {w : ℕ}
     (left right : E → C) (hw : 0 < w)
     (hincident : ∀ c, ∃ e, c = left e ∨ c = right e) :

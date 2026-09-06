@@ -1,4 +1,4 @@
-"""Exact finite illustrations; the universal and sharpness proofs are in Lean."""
+"""Compute finite sequence values; Lean proves the all-index and sharpness results."""
 M = [1, 1]
 for n in range(1, 20):
     numerator = (2*n+3)*M[n] + 3*n*M[n-1]

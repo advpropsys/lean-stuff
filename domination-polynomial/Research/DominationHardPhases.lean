@@ -89,8 +89,9 @@ theorem both_small_card_le {C : Type*} [Fintype C]
     exact Prod.ext (congrArg (fun z ↦ z.1.val) h) (congrArg (fun z ↦ z.2.val) h)
   simpa [pow_two] using Fintype.card_le_of_injective f hf
 
-/-- A bad left-majority configuration injects into an unrestricted bad left
-word and a small right word. `P` may be the subset-size tail event. -/
+/-- Configurations with at least k occupied left cells and left word satisfying
+`P` inject into pairs of a word satisfying `P` and a right word with fewer than
+k occupied cells. `P` may be a subset-size tail event. -/
 theorem left_bad_card_le {C : Type*} [Fintype C] {B : C → C → Prop}
     {k : ℕ} (hrect : NoLargeRectangle B k) (P : Word C → Prop) :
     Fintype.card {p : Config C // Compatible B p ∧
@@ -195,7 +196,7 @@ theorem small_words_binomial_bound {C : Type*} [Fintype C] (k : ℕ) :
         (Fintype.card C).choose i * 3 ^ i := by
   exact (small_words_support_bound k).trans_eq (support_sum_eq_binomial k)
 
-/-- A flexible entropy bound for minority words. The cutoff hypothesis is
+/-- An entropy bound for minority words. The cutoff hypothesis is
 only an arithmetic relation between the integer cutoff and epsilon. -/
 theorem small_words_entropy_bound {C : Type*} [Fintype C] (k : ℕ) (ε z : ℝ)
     (hz : 0 < z) (hz1 : z ≤ 1)

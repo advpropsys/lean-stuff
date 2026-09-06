@@ -1,4 +1,4 @@
-"""One improved member: exact scalar verification only, no graph search."""
+"""Exact scalar checks for the smaller projective graph parameters."""
 import json
 from fractions import Fraction as F
 from math import isqrt

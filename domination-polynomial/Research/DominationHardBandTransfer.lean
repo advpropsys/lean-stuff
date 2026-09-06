@@ -2,8 +2,8 @@ import Research.DominationGadgetStates
 import Research.DominationHardPhaseBounds
 import Research.DominationIntervalMass
 
-/-! Discharge the hard-control size-band assumptions using the actual
-four-state bijection and the canonical phase estimates. -/
+/-! Hard-control size-band bounds from the four-state bijection and
+the canonical phase estimates. -/
 noncomputable section
 attribute [local instance] Classical.propDecidable Classical.decEq
 set_option synthInstance.maxSize 1024

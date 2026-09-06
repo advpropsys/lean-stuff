@@ -20,9 +20,9 @@ theorem integral_uniform {A : Type*} [Fintype A] [MeasurableSpace A]
       (∑ x, g x) / Fintype.card A := by
   simp [uniformOn, ProbabilityTheory.cond, integral_smul_measure, div_eq_mul_inv, mul_comm]
 
-/-- Counting Hoeffding for a uniform word over any nonempty finite alphabet.
-Every coordinate's observable is in [0,1]; its mean is computed explicitly
-as an average over the alphabet. No independence assumption is left to the caller. -/
+/-- Hoeffding's bound for a uniform word over a nonempty finite alphabet.
+Each coordinate's observable is in [0,1], with mean equal to its average over
+the alphabet. Coordinate independence follows from the uniform word distribution. -/
 theorem alphabet_tail {A : Type*} [Fintype A] [Nonempty A]
     [MeasurableSpace A] [MeasurableSingletonClass A]
     (g : A → ℝ) (hg : ∀ a, g a ∈ Set.Icc 0 1)

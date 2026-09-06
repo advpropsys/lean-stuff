@@ -1,21 +1,21 @@
 # Graph examples and reproducible figures
 
 The actual counterexample has **15,211,807,199,220,036,387,538,871,517,957 vertices**.
-Its proof uses exact finite counting and bounds. We do not enumerate that graph
-or compute its complete coefficient sequence.
+The proof uses exact finite counting and bounds. Neither the graph nor its
+complete coefficient sequence is enumerated.
 
-![Graph examples](../figures/graph_example.svg)
+![Graph examples](https://raw.githubusercontent.com/advpropsys/lean-stuff/main/domination-polynomial/figures/graph_example.svg)
 
 The left panel is the `q=2, w=1` graph. The right panel is the 14-vertex
 graph, with dominating set {3, 4, 5} highlighted. The smaller graph is unimodal;
 the larger graph’s domination coefficients have not been computed.
-[600-dpi PNG](../figures/graph_example.png) · [Vector PDF](../figures/graph_example.pdf)
+[600-dpi PNG](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/figures/graph_example.png) · [Vector PDF](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/figures/graph_example.pdf)
 
-![Certified coefficient valley](../figures/canonical_certified_valley.svg)
+![Certified coefficient valley](https://raw.githubusercontent.com/advpropsys/lean-stuff/main/domination-polynomial/figures/canonical_certified_valley.svg)
 
 ## The actual counterexample
 
-`graph_example.py` specifies the graph through vertex labels and an exact
+[graph_example.py](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/graph_example.py) specifies the graph through vertex labels and an exact
 adjacency predicate. Its default parameters are the parameters of the closed
 Lean theorem `Research.DominationCounterexample.canonical_connected_counterexample`:
 
@@ -56,7 +56,7 @@ The Python adjacency implementation is an illustration of the mathematical
 definition, not a formally verified extraction of Lean code. Calling
 `materialize()` on the canonical graph raises an error before enumeration.
 
-`canonical_parameters.json` records exact integers and the bounds used in the
+[canonical_parameters.json](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/canonical_parameters.json) records exact integers and the bounds used in the
 figure. With `K = t + L/2`, the size bands are
 `J_A = [K − 1.09b, K − 0.91b]` and
 `J_C = [K − 0.81b, K − 0.70b]`. Each contains more than one third of all
@@ -76,18 +76,18 @@ establish the full inequalities.
 
 ## Small graphs
 
-- `q2_graph.json`: the same projective construction with `q=2`, `w=1`,
+- [q2_graph.json](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/q2_graph.json): the same projective construction with `q=2`, `w=1`,
   **182 vertices and 889 edges**. Labels and the complete edge list are saved.
   This is an example of the definition; it is **not certified to be a
   counterexample**, and its domination polynomial is not computed here.
-- `toy_coefficients.json`: one left two-vertex cell and one right triangle,
+- [toy_coefficients.json](https://github.com/advpropsys/lean-stuff/blob/main/domination-polynomial/examples/toy_coefficients.json): one left two-vertex cell and one right triangle,
   joined completely in the auxiliary graph, with `w=1`. The final graph has
   **14 vertices**. Its exact domination polynomial is computed in two ways:
   by the omitted-control formula and by independent enumeration of all
   `2¹⁴ = 16,384` vertex subsets. The results agree. This toy is **unimodal**,
   so it is **not a counterexample**.
 
-![Exact toy coefficients](../figures/toy_exact_coefficients.svg)
+![Exact toy coefficients](https://raw.githubusercontent.com/advpropsys/lean-stuff/main/domination-polynomial/figures/toy_exact_coefficients.svg)
 
 For the exact toy computation, the formula is
 
@@ -124,6 +124,6 @@ The figures were generated and visually inspected with Matplotlib 3.10.9.
 All text and mathematical labels use the bundled Inter font; headings use
 sentence case. PNG exports are 600 dpi, SVG text is converted to vector paths,
 and PDF embeds the font. Keep the full repository checkout when regenerating:
-the scripts use [the shared plot style](../../plot_style.py) and
-[bundled Inter files](../../assets/fonts/inter/README.md). No system font
+the scripts use [the shared plot style](https://github.com/advpropsys/lean-stuff/blob/main/plot_style.py) and
+[bundled Inter files](https://github.com/advpropsys/lean-stuff/blob/main/assets/fonts/inter/README.md). No system font
 installation is needed.

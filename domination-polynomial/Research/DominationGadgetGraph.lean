@@ -108,7 +108,7 @@ theorem final_vertex_card : Fintype.card Vertex = n := by
   rw [Nat.card_sum, Nat.card_prod, Nat.card_fin, hc, he]
   simp only [n, L, Nat.mul_comm]
 
-/-- The canonical final graph inherits the exact domination characterization. -/
+/-- The domination characterization applied to the canonical final graph. -/
 theorem final_dominates_iff (S : Set Vertex) :
     DominationIncidenceGraph.Dominates finalGraph S ↔
     ∀ e i, Sum.inl (left e) ∉ S → Sum.inl (right e) ∉ S →

@@ -38,7 +38,7 @@ theorem wordBits_sum (r : ℕ) (w : Word (Fin r)) :
       rfl
     _ = _ := by simp_rw [twoBits_sum]
 
-/-- Sharp two-bit tail for the left state sizes 0,1,1,2. -/
+/-- Two-bit Hoeffding bound for the left state sizes 0,1,1,2. -/
 theorem left_word_tail (r : ℕ) (hr : 0 < r) (u : ℝ) (hu : 0 ≤ u) :
     (Fintype.card {w : Word (Fin r) //
       u ≤ |(∑ i, (leftSize (w i) : ℝ)) - r|} : ℝ) / 4 ^ r ≤

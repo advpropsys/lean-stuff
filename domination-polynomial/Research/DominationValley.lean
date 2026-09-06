@@ -47,7 +47,7 @@ theorem exists_larger_of_mass {n : ℕ} (f : Fin (n + 1) → ℕ)
       _ = c * (n + 1) := Nat.mul_comm _ _
   omega
 
-/-- Large mass strictly on both sides of `j` forces a genuine strict valley. -/
+/-- Sufficient coefficient mass on each side of `j` implies a strict valley. -/
 theorem strict_valley_of_interval_mass {n : ℕ} (f : Fin (n + 1) → ℕ)
     (S T : Finset (Fin (n + 1))) (j : Fin (n + 1)) (a c : ℕ)
     (hS : ∀ i ∈ S, i < j) (hT : ∀ k ∈ T, j < k)
@@ -90,7 +90,7 @@ theorem exists_larger_of_real_mass {n : ℕ} (f : Fin (n + 1) → ℕ)
     nlinarith
   linarith
 
-/-- The exact real thresholds of the manuscript imply failure of unimodality.
+/-- The stated real thresholds imply failure of unimodality.
 The graph-specific coefficient mass estimates remain explicit hypotheses. -/
 theorem not_unimodal_of_real_interval_mass {n : ℕ} (f : Fin (n + 1) → ℕ)
     (S T : Finset (Fin (n + 1))) (j : Fin (n + 1)) (Z : ℝ)
@@ -112,8 +112,8 @@ theorem not_unimodal_of_real_interval_mass {n : ℕ} (f : Fin (n + 1) → ℕ)
     exists_larger_of_real_mass f T j _ _ hc hmassT hsmall hgap
   exact not_unimodal_of_strict_valley f i j k (hS i hi) (hT k hk) hfi hfk
 
-/-- Only the number of indices in the selected interval enters pigeonhole.
-This sharper form can substantially reduce a counterexample's parameters. -/
+/-- The pigeonhole threshold depends on the number of indices in the selected
+interval rather than the length of the full sequence. -/
 theorem exists_larger_of_real_mass_card {n : ℕ} (f : Fin (n + 1) → ℕ)
     (S : Finset (Fin (n + 1))) (j : Fin (n + 1)) (a c : ℝ)
     (hmass : a ≤ ∑ i ∈ S, (f i : ℝ)) (hsmall : (f j : ℝ) ≤ c)
@@ -130,7 +130,7 @@ theorem exists_larger_of_real_mass_card {n : ℕ} (f : Fin (n + 1) → ℕ)
       _ = (S.card : ℝ) * c := by simp
   linarith
 
-/-- General interval certificate using actual interval cardinalities. -/
+/-- Interval certificate with thresholds determined by interval cardinalities. -/
 theorem not_unimodal_of_interval_mass_card {n : ℕ} (f : Fin (n + 1) → ℕ)
     (S T : Finset (Fin (n + 1))) (j : Fin (n + 1)) (a c : ℝ)
     (hS : ∀ i ∈ S, i < j) (hT : ∀ k ∈ T, j < k)

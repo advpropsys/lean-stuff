@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Draw two actual small graphs from the domination construction.
+"""Draw the 182-vertex and 14-vertex domination graphs.
 
-Every edge is drawn, including the complete graph on the controls. Neither
-small graph is asserted to be a counterexample. The right-hand example is
-the same 14-vertex graph used for the exact coefficient plot.
+Both panels include all edges. Neither graph is asserted to be a
+counterexample. The right panel uses the graph in the coefficient plot.
 """
 import json
 from itertools import combinations
@@ -130,7 +129,7 @@ def main():
 
     segment_collection(bx, toy_edges, toy_positions,
                        colors=CLONE, linewidths=.85, alpha=.52, zorder=1)
-    # Emphasize one actual edge from each unselected vertex to the selected set.
+    # Highlight one edge from each unselected vertex to the dominating set.
     witnesses = [(v, min(neighborhoods[v] & selected))
                  for v in range(14) if v not in selected]
     assert len(witnesses) == 11

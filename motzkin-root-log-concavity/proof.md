@@ -1,6 +1,6 @@
 # Proof of the sharp Motzkin-root theorem
 
-Define M₀=M₁=1 and (n+3)Mₙ₊₁=(2n+3)Mₙ+3nMₙ₋₁ for n≥1. Define T₀=1 and Tₙ₊₁=Mₙ₊₁−Tₙ. Induction identifies T with the alternating sum.
+Define M₀=M₁=1 and (n+3)Mₙ₊₁=(2n+3)Mₙ+3nMₙ₋₁ for integer n≥1. Define T₀=1 and Tₙ₊₁=Mₙ₊₁−Tₙ. Induction gives Tₙ=Mₙ−Mₙ₋₁+⋯+(−1)ⁿM₀. For n≥1, put rₙ=Tₙ^(1/n), the nonnegative real n-th root. The result is rₙ₋₁rₙ₊₁<rₙ² for every n≥6, with the strict reverse at n=5.
 
 ## The ratio enclosure
 
@@ -9,7 +9,7 @@ Put
 x_k=\frac{M_{k+1}}{M_k},\qquad y_k=\frac{T_{k+1}}{T_k},
 \qquad b_k=\frac{3(k+1)}{k+5/2}.
 \]
-We need
+The required enclosure is
 \[
 b_k\le y_k\le b_{k+2}\qquad(k\ge9). \tag{1}
 \]
@@ -32,7 +32,7 @@ y_k=x_k-1+\frac{x_k}{y_{k-1}}. \tag{2}
 \]
 Here \(T_2=T_3=2\); since \(x_k\ge b_k\ge2\) for \(k\ge2\), the first recurrence proves \(T_k>0\) for all \(k\ge2\).
 
-We next prove \(x_k\le y_k\le x_{k+1}\) for \(k\ge9\).
+Next, \(x_k\le y_k\le x_{k+1}\) for \(k\ge9\), as follows by induction.
 The base case follows by cross-multiplication from
 \[
 x_9=\frac{2188}{835}<y_9=\frac{1586}{602}<x_{10}=\frac{5798}{2188}.
@@ -48,7 +48,7 @@ where
 H_k(t)=f_{k+1}(t)-1+\frac{f_{k+1}(t)}{t}
 -f_{k+2}(f_{k+1}(t)).
 \]
-To see that \(H_k\) decreases, write \(f_{k+1}(t)=A+B/t\) and \(f_{k+2}(t)=C+D/t\), with all four constants positive. Then
+To prove that \(H_k\) decreases, write \(f_{k+1}(t)=A+B/t\) and \(f_{k+2}(t)=C+D/t\), with all four constants positive. Then
 \[
 H_k(t)=A-1-C+\frac{A+B}{t}+\frac{B}{t^2}-\frac{Dt}{At+B}.
 \]
@@ -58,7 +58,7 @@ H_k(x_k)\le H_k(b_k)
 =-\frac{3(4k^2-13k-53)}{4(k+1)(k+4)(k+5)(2k+5)}<0
 \quad(k\ge9).
 \]
-The numerator polynomial is positive at 9 and increasing thereafter. This closes the induction. Combining the two enclosures proves (1).
+The numerator polynomial is positive at 9 and increasing thereafter. This completes the induction. Combining the two enclosures proves (1).
 
 
 ## The logarithmic tail used in Lean
@@ -80,4 +80,4 @@ Tₙ^[2(n²−1)] > Tₙ₋₁^[n(n+1)] Tₙ₊₁^[n(n−1)].
 
 The relevant values T₄ through T₁₂ are 7, 14, 37, 90, 233, 602, 1586, 4212, 11299. At center 5 the inequality strictly reverses. The modules `MotzkinFinite` and `Motzkin` check these finite powers in the kernel. Taking positive roots establishes strict log-concavity of rₙ from index 5, and the failed center 5 rules out starting at index 4 or earlier.
 
-The generic analytic module has explicit hypotheses; `MotzkinTheorem` discharges them for the recurrence-defined sequence. No enclosure or desired inequality remains assumed by the exported theorems.
+The generic analytic module has explicit hypotheses, all proved for the recurrence-defined sequence in `MotzkinTheorem`. The exported theorems require no assumed enclosure or concavity inequality.
